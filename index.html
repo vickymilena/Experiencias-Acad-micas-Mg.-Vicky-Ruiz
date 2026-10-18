@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#112A46">
+  <meta name="description" content="Experiencias Académicas de Mg. Vicky Ruiz: recursos interactivos para investigar, comprender y aplicar conocimientos universitarios.">
+  <title>Experiencias Académicas | Mg. Vicky Ruiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#112A46;--teal:#176B80;--gold:#D6A84B;--cream:#F7F4EC;--ink:#303A46;--white:#fff;--border:#e4e6e8;--soft:#ebf3f5;--muted:#5b6672}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#fcfbf8;color:var(--ink);font-family:Inter,Arial,sans-serif;font-size:16px;line-height:1.6}
+    h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:Manrope,Inter,Arial,sans-serif;line-height:1.17;letter-spacing:-.035em}
+    a{color:inherit}a:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:4px}
+    .wrap{width:min(1120px,calc(100% - 48px));margin:auto}
+    .site-header{background:var(--white);border-bottom:1px solid #edf0f2;position:relative;z-index:10}
+    .nav{min-height:85px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+    .brand-symbol{width:47px;height:47px;border-radius:13px;background:var(--navy);color:var(--gold);display:grid;place-items:center;flex:none}
+    .brand-name{display:block;font-family:Manrope,sans-serif;color:var(--navy);font-weight:800;font-size:16px;letter-spacing:-.025em;line-height:1.25}
+    .brand-by{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+    .nav-links{display:flex;align-items:center;gap:28px}
+    .nav-links a{text-decoration:none;font-size:13px;font-weight:700;color:var(--navy)}.nav-links a:hover{color:var(--teal)}
+    .hero{background:var(--navy);color:var(--white);overflow:hidden;position:relative}
+    .hero::before{content:"";position:absolute;width:570px;height:570px;border:1px solid #ffffff18;border-radius:50%;right:-135px;top:-300px;box-shadow:0 0 0 110px #ffffff08,0 0 0 220px #ffffff05;pointer-events:none}
+    .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(#fff 0.65px,transparent 0.65px);background-size:22px 22px;opacity:.045;pointer-events:none}
+    .hero-inner{display:grid;grid-template-columns:1.25fr .75fr;gap:58px;align-items:center;min-height:440px;padding:65px 0;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.15em;font-weight:700;font-size:11px;color:var(--gold);margin-bottom:18px}
+    .eyebrow::before{content:"";height:2px;width:27px;background:var(--gold)}
+    .hero h1{max-width:740px;font-size:clamp(35px,4.5vw,58px);line-height:1.11;margin-bottom:22px;color:#fff}
+    .hero h1 span{color:#e9c783}
+    .hero p{font-size:16px;color:#e4ecf1;max-width:610px;margin-bottom:29px}
+    .primary-link{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--gold);color:#17283d;border-radius:9px;text-decoration:none;font-weight:800;font-size:13px;padding:15px 22px;transition:transform .15s,filter .15s}
+    .primary-link:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .hero-note{padding:25px 25px 22px;border:1px solid #ffffff30;border-radius:19px;background:#ffffff0c;backdrop-filter:blur(3px);box-shadow:0 20px 55px #07192b35}
+    .hero-note .small-title{color:#f0d490;font-size:12px;letter-spacing:.11em;text-transform:uppercase;font-weight:800;margin:0 0 17px}
+    .step{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid #ffffff20}.step:last-child{border:0;padding-bottom:0}
+    .number{width:38px;height:38px;border:1px solid #e9c78399;border-radius:11px;color:#e9c783;display:grid;place-items:center;font-weight:800;font-family:Manrope;flex:none}
+    .step strong{display:block;font-size:14px;color:#fff;font-weight:700}.step small{display:block;color:#d2e0e6;font-size:12px;margin-top:2px}
+    section.catalog{padding:70px 0 75px}
+    .section-top{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:29px}
+    .kicker{color:var(--teal);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.13em;margin:0 0 10px}
+    .section-top h2{font-size:clamp(26px,3vw,38px);color:var(--navy);margin:0}
+    .section-top p{max-width:415px;color:var(--muted);font-size:14px;margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px;align-items:stretch}
+    .card{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0;box-shadow:0 8px 32px #112a4609;transition:transform .18s,box-shadow .18s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 16px 38px #112a4612}
+    .card-top{height:8px;background:var(--teal)}.card:nth-child(2) .card-top{background:#d6a84b}.card:nth-child(3) .card-top{background:#496c85}
+    .card-inner{padding:27px 24px 25px;display:flex;flex-direction:column;flex:1}
+    .card-icon{width:54px;height:54px;border-radius:14px;background:#eaf3f6;color:var(--teal);display:grid;place-items:center;margin-bottom:20px}
+    .card:nth-child(2) .card-icon{background:#fbf3e2;color:#a27423}.card:nth-child(3) .card-icon{background:#e9eff4;color:#496c85}
+    .state{display:inline-block;border-radius:100px;padding:5px 10px;background:#e8f5f2;color:#176b59;font-size:11px;font-weight:800;letter-spacing:.01em;align-self:flex-start;margin-bottom:14px}
+    .state.future{background:#f0f1f3;color:#626b75}
+    .card h3{color:var(--navy);font-size:21px;margin:0 0 12px}
+    .card p{font-size:13px;line-height:1.75;color:var(--muted);margin:0 0 20px}
+    .module{border-top:1px solid #e9eef0;padding:17px 0 0;margin-top:auto}
+    .module-label{display:block;color:#6b7480;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:9px}
+    .lesson-link{display:flex;justify-content:space-between;align-items:center;gap:9px;padding:12px 13px;border-radius:10px;background:var(--soft);color:var(--navy);text-decoration:none;font-size:12px;line-height:1.5;font-weight:800;transition:background .18s}
+    .lesson-link:hover{background:#dbeaf0}
+    .topics{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
+    .topic{border:1px solid #e2e6e8;border-radius:7px;padding:6px 8px;font-size:11px;line-height:1.4;color:#65707b;background:#fafafa}
+    .message-strip{padding:20px 24px;border-radius:12px;background:#ecf2f3;border-left:4px solid var(--teal);color:var(--navy);font-size:13px;margin-top:24px}
+    .about{background:var(--cream);padding:43px 0}
+    .about-inner{display:flex;align-items:center;justify-content:space-between;gap:34px}
+    .about h2{font-size:24px;color:var(--navy);margin:0 0 8px}.about p{font-size:14px;max-width:730px;margin:0;color:#52606c}
+    .signature{font-family:Manrope,sans-serif;color:var(--teal);font-weight:800;font-size:16px;white-space:nowrap}
+    footer{background:var(--navy);padding:24px 0;color:#dce5ea;font-size:12px}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .footer-inner strong{color:#fff}
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:26px;padding:50px 0}.hero-note{max-width:460px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.section-top{display:block}.section-top p{margin-top:14px}}
+    @media(max-width:640px){.wrap{width:min(100% - 32px,1120px)}.nav{min-height:75px}.brand-name{font-size:14px}.brand-symbol{width:41px;height:41px}.nav-links{gap:12px}.nav-links a{font-size:11px}.nav-links a:first-child{display:none}.hero-inner{padding:48px 0}.hero h1{font-size:35px}.hero p{font-size:14px}.hero-note{padding:19px}.cards{grid-template-columns:1fr}.section-top h2{font-size:28px}section.catalog{padding:48px 0}.about-inner,.footer-inner{flex-direction:column;align-items:flex-start;gap:16px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body id="inicio">
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="#inicio" class="brand" aria-label="Ir al inicio de Experiencias Académicas">
+        <span class="brand-symbol" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 7 8-4 1 14-9 4-9-4 1-14z"/><path d="M12 7v14M4 4l8 4 8-4"/></svg></span>
+        <span><span class="brand-name">Experiencias Académicas</span><span class="brand-by">Mg. Vicky Ruiz</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a><a href="#experiencias">Experiencias</a><a href="#acerca">Sobre este espacio</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-inner">
+        <div>
+          <div class="eyebrow">Un espacio para aprender haciendo</div>
+          <h1 id="hero-title">El conocimiento se comprende mejor cuando <span>se vive.</span></h1>
+          <p>Explora experiencias académicas que convierten los conceptos en preguntas, decisiones, actividades y nuevas formas de comprender el mundo profesional.</p>
+          <a class="primary-link" href="#experiencias">Explorar experiencias <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-note" aria-label="Nuestra ruta de aprendizaje">
+          <p class="small-title">Nuestra ruta</p>
+          <div class="step"><span class="number">01</span><span><strong>Observa</strong><small>Descubre preguntas y nuevas perspectivas.</small></span></div>
+          <div class="step"><span class="number">02</span><span><strong>Explora</strong><small>Interactúa con ideas, casos y herramientas.</small></span></div>
+          <div class="step"><span class="number">03</span><span><strong>Aplica</strong><small>Construye respuestas y toma decisiones.</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencias" class="catalog wrap" aria-labelledby="section-title">
+      <div class="section-top">
+        <div><p class="kicker">Colección académica</p><h2 id="section-title">Elige tu área de aprendizaje</h2></div>
+        <p>Este espacio crecerá con cada nueva clase. Por ahora, puedes ingresar al Laboratorio de Investigación; las demás áreas se incorporarán progresivamente.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-top"></div><div class="card-inner">
+            <div class="card-icon" aria-hidden="true"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5M8 11h6M11 8v6"/></svg></div>
+            <span class="state">1 experiencia disponible</span>
+            <h3>Semillero de investigación</h3>
+            <p>De las primeras preguntas a la construcción de problemas de investigación sustentados en evidencias.</p>
+            <div class="module">
+              <span class="module-label">Experiencia publicada</span>
+              <a class="lesson-link" href="https://vickymilena.github.io/LABORATORIO-INVESTIGACION/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Laboratorio de Investigación en una nueva pestaña">Laboratorio de Investigación <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-top"></div><div class="card-inner">
+            <div class="card-icon" aria-hidden="true"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 16v-4m5 4V8m5 8v-6"/></svg></div>
+            <span class="state future">En preparación</span>
+            <h3>Finanzas</h3>
+            <p>Aprende a interpretar indicadores, comparar alternativas y comprender decisiones financieras mediante casos y herramientas prácticas.</p>
+            <div class="module"><span class="module-label">Líneas de trabajo previstas</span><div class="topics"><span class="topic">Gerencia financiera</span><span class="topic">Finanzas internacionales</span></div></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-top"></div><div class="card-inner">
+            <div class="card-icon" aria-hidden="true"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6 4V9l6 4V5l6 3v13H3Z"/><path d="M7 17h2m3 0h2m3 0h1"/></svg></div>
+            <span class="state future">En preparación</span>
+            <h3>Ingeniería Industrial</h3>
+            <p>Explora procesos, productividad y herramientas para analizar y mejorar situaciones reales de las organizaciones.</p>
+            <div class="module"><span class="module-label">Asignaturas previstas</span><div class="topics"><span class="topic">Gestión por procesos</span><span class="topic">Métodos y tiempos</span><span class="topic">Más por incorporar</span></div></div>
+          </div>
+        </article>
+      </div>
+      <div class="message-strip"><strong>Una colección en crecimiento.</strong> Cada experiencia tendrá su propia dirección y se conservará cuando se agreguen nuevas clases.</div>
+    </section>
+
+    <section class="about" id="acerca" aria-labelledby="about-title"><div class="wrap about-inner"><div><h2 id="about-title">Un espacio para aprender con sentido</h2><p>Materiales creados para conectar el conocimiento académico con preguntas, problemas y decisiones del ejercicio profesional. Un proyecto educativo que seguirá creciendo, clase a clase.</p></div><div class="signature">Mg. Vicky Ruiz</div></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><span><strong>Experiencias Académicas</strong> · Mg. Vicky Ruiz</span><span>Aprender · Explorar · Aplicar</span></div></footer>
+</body>
+</html>
