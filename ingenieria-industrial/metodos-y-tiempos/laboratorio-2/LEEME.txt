@@ -1,0 +1,32 @@
+LABORATORIO 2 | CURSOGRAMA SINÓPTICO
+Mg. Vicky Ruiz
+
+QUÉ CONTIENE
+- index.html: aplicación interactiva con 6 momentos educativos.
+- Caso_Calzados_del_Caribe.docx: documento Word del caso original.
+- Plantilla_Cursograma_Sinoptico.xlsx: plantilla de Excel original.
+
+PARA USAR EN TU COMPUTADOR
+1. Extrae todo el ZIP.
+2. Conserva juntos los tres archivos anteriores.
+3. Haz doble clic en index.html; se recomienda Chrome o Edge.
+4. Sigue la secuencia: fundamentos, detectives, kit escolar, calzado, revisión, IA.
+
+DESCARGAS
+La aplicación permite guardar el cursograma como PNG, exportar la matriz como XLSX y
+abrir la vista de impresión para elegir 'Guardar como PDF'.
+La impresión a PDF depende del diálogo de impresión del navegador.
+También puedes descargar un proyecto JSON y recuperarlo después.
+
+ADVERTENCIAS
+- Este material funciona en el navegador sin enviar datos a una plataforma.
+- El avance puede persistir en el navegador local; para conservarlo a largo plazo,
+  usa 'Guardar proyecto editable'.
+- La publicación del HTML no recibe ni guarda calificaciones automáticamente.
+- El caso es ficticio. Los tiempos suministrados no son tiempos estándar.
+
+PUBLICAR
+Netlify: entra en https://app.netlify.com/drop y arrastra esta carpeta entera.
+GitHub Pages: crea un repositorio, sube estos archivos a la raíz, Settings > Pages,
+Deploy from a branch, main y / (root).
+Para actualizar, reemplaza los archivos de la carpeta publicada.
