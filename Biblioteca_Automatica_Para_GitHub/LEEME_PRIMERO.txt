@@ -1,0 +1,69 @@
+BIBLIOTECA AUTOMÁTICA DE LABORATORIOS
+Mg. Vicky Ruiz | Experiencias Académicas
+
+QUÉ HACE
+- Cuenta los laboratorios publicados en cada asignatura.
+- Agrega automáticamente tarjetas de los nuevos laboratorios.
+- Reconoce asignaturas y programas nuevos cuando contienen laboratorios.
+- Conserva los títulos y descripciones ya escritos en tus páginas existentes.
+- Genera una biblioteca general con todas las experiencias del repositorio.
+- Evita hacer consultas a GitHub cada vez que ingresa un estudiante.
+
+INSTALACIÓN (UNA SOLA VEZ)
+1. Descomprime este ZIP.
+2. Abre TU repositorio en GitHub, en la rama main, al nivel donde está el index.html principal.
+3. Haz clic en Add file -> Upload files.
+4. Sube LOS CONTENIDOS de esta carpeta, respetando las rutas:
+   biblioteca.js
+   biblioteca.html
+   herramientas/generar_catalogo.py
+   .github/workflows/publicar_biblioteca.yml
+   Puedes dejar LEEME_PRIMERO.txt para consulta, pero no es obligatorio.
+5. Confirma con Commit changes.
+6. En GitHub abre Settings -> Pages -> Build and deployment -> Source y elige GitHub Actions.
+7. En Actions debe verse 'Publicar biblioteca automatica'.
+   Si aún no se ejecutó, entra al flujo y pulsa Run workflow -> Run workflow.
+8. Cuando ambos trabajos (construir y publicar) estén verdes,
+   abre tu página y pulsa Ctrl+Shift+R.
+
+DESPUÉS DE LA INSTALACIÓN
+Sube cada laboratorio dentro de la asignatura correspondiente, por ejemplo:
+  ingenieria-industrial/metodos-y-tiempos/laboratorio-4/index.html
+  ingenieria-industrial/gestion-por-procesos/laboratorio-1/index.html
+  finanzas/matematica-financiera/laboratorio-1/index.html
+
+Sólo se considera disponible un laboratorio si tiene index.html.
+Después del commit y la publicación correcta en Actions, la biblioteca
+se actualiza sola. GitHub Pages puede tardar un poco en terminar de publicar.
+
+EL REPOSITORIO NO SE REESCRIBE
+El flujo crea el archivo catalogo.json y agrega los enlaces automáticos
+únicamente a la copia que se publica. Tus index.html originales,
+las actividades, la teoría y los archivos de cada laboratorio NO se modifican.
+
+TÍTULOS Y DESCRIPCIONES OPCIONALES
+Para un laboratorio nuevo, el sistema lee <title> del index.html.
+Si quieres una descripción y un título específicos, añade junto a index.html
+un archivo laboratorio.json como este:
+{
+  "titulo": "Laboratorio 4 · Diagrama de recorrido",
+  "descripcion": "Analiza recorridos, distancias y alternativas de distribución."
+}
+No es obligatorio crear este archivo ni modificar ninguna página principal.
+
+BIBLIOTECA GENERAL
+Aparecerá en la dirección de tu GitHub Pages con /biblioteca.html al final.
+La portada principal añadirá también un enlace a esta biblioteca.
+
+SI NO SE ACTUALIZA
+- Comprueba Actions -> Publicar biblioteca automatica; ambos trabajos deben estar verdes.
+- Revisa Settings -> Pages: Source = GitHub Actions.
+- Verifica que el laboratorio nuevo se llame laboratorio-N e incluya index.html.
+- Abre la dirección pública (no el visor del código en GitHub).
+- Actualiza la página con Ctrl+Shift+R.
+
+SEGURIDAD
+Se incluye JavaScript y Python legibles, sin archivos codificados ni
+archivos con ejecutables. No desactives Kaspersky para instalarlos.
+Si Kaspersky detecta algo, no restaures el elemento antes de verificarlo.
+El sistema no almacena las respuestas ni calificaciones de los estudiantes.
