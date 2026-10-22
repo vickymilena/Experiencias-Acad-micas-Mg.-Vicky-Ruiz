@@ -1,0 +1,9 @@
+LABORATORIO 3 - CURSOGRAMA ANALÍTICO
+
+Subir la carpeta completa laboratorio-3 al repositorio GitHub. NO subir solo index.html, porque el código y los materiales ahora están separados.
+
+Abrir con GitHub Pages. Las funciones de generación Excel necesitan que la página se sirva por HTTP(S); la apertura local file:// restringe la lectura de la plantilla.
+
+Si el antivirus sigue advirtiendo una amenaza, no la ignore ni restaure los archivos; solicite revisión a soporte.
+
+Mg. Vicky Ruiz
