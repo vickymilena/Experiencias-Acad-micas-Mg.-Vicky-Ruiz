@@ -11,7 +11,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-LAB_PATTERN = re.compile(r"^laboratorio-(\d+)$", re.IGNORECASE)
+LAB_PATTERN = re.compile(     r"^laboratorio[-_]+0*(\d+)(?:[-_][^/]+)?$",     re.IGNORECASE )
 BAD_DIRS = {".git", ".github", "herramientas", "scripts", "recursos", "assets", "node_modules", "__pycache__", ".venv"}
 
 def limpiar(texto: str) -> str:
