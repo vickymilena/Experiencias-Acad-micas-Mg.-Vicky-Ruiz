@@ -1,0 +1,39 @@
+LABORATORIO 05 · DIAGRAMA BIMANUAL
+Métodos y Tiempos | Ingeniería Industrial
+Mg. Vicky Ruiz
+
+ARCHIVOS DEL PAQUETE
+- index.html: aplicación del laboratorio, 13 escenas.
+- assets/Caso_Corte_Tubos_Vidrio.docx: texto original del ejercicio.
+- assets/Formato_Original_Diagrama_Bimanual.xlsx: formato original de la docente.
+- assets/Ensamblaje_Lapicero.mp4: video original del desafío.
+- assets/Solucion_Vidrio_Referencia.jpg: corrección visual del ejercicio de vidrio (se revela tras el intento).
+
+ABRIR EN EL COMPUTADOR
+1. Descomprime este ZIP en una carpeta.
+2. Abre index.html con Chrome, Edge o Firefox.
+3. No separes el archivo index.html de su carpeta assets.
+4. Introduce nombre y apellido, responde el quiz y realiza las actividades.
+5. Guarda y descarga los resultados. El botón «Nuevo estudiante» borra datos del navegador después de confirmar.
+
+CÓMO PUBLICAR EN GITHUB PAGES
+1. Abre tu repositorio de experiencias académicas.
+2. Dentro de ingenieria-industrial/metodos-y-tiempos crea una subcarpeta, por ejemplo laboratorio-05-bimanual.
+3. Sube index.html y la carpeta assets con TODOS sus archivos, manteniendo la estructura.
+4. Confirma los cambios (Commit changes).
+5. Si GitHub Pages ya está activado, abre el enlace del sitio y añade la ruta /ingenieria-industrial/metodos-y-tiempos/laboratorio-05-bimanual/.
+6. Si no está activado: Settings > Pages > Deploy from a branch > main > /(root) > Save.
+7. Para actualizar, reemplaza los archivos de la subcarpeta y confirma los cambios.
+8. Si existe un índice general de Métodos y Tiempos, agrega el enlace al laboratorio 5 en ese índice.
+
+CÓMO PUBLICAR EN NETLIFY
+1. En Netlify, selecciona Add new project / Deploy manually (los nombres pueden variar).
+2. Arrastra la carpeta DESCOMPRIMIDA que contiene index.html y assets.
+3. Abre el enlace público que genere Netlify.
+4. Para actualizar, despliega nuevamente la carpeta modificada.
+
+ACCESO A INTERNET
+La teoría, los diagramas, el video y las descargas locales funcionan sin conexión si se conservan los recursos en su lugar. Los enlaces externos para copiar los prompts y visitar ChatGPT, Gemini o Copilot sí requieren internet. No se capturan respuestas en un servidor: el avance solo se conserva en este navegador. Publicar la web NO guarda automáticamente respuestas ni calificaciones; para recibir archivos, se requiere Moodle u otra solución autorizada.
+
+NOTA SOBRE EL VIDEO
+Antes de compartirlo en un repositorio público, verifica que se cuenta con autorización para publicar un video con personas reconocibles.
