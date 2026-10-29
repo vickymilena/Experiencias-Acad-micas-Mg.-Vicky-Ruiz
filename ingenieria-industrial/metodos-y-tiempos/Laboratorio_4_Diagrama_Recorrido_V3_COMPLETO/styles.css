@@ -9,3 +9,10 @@
 @media(max-width:700px){.map-card{padding:6px}.current-step{padding:10px}.map-actions .btn{flex:1}.prompt-pre{height:220px}}
 
 .workspace.wide-plan{grid-template-columns:1fr}.workspace.wide-plan>.stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:16px}@media(max-width:760px){.workspace.wide-plan>.stack{grid-template-columns:1fr}}
+/* V4: editor flexible de estaciones y descargas vectoriales */
+.move-select{padding:9px 10px;border:1px solid #bad0d3;border-radius:9px;max-width:240px;background:#fff;color:#112A46}
+.coord-input{width:94px;min-height:40px;padding:8px;border:1px solid #bad0d3;border-radius:9px;color:#112A46}
+.proposal-map .plan-svg [data-move-station]{cursor:pointer}
+.proposal-map .plan-svg [data-relocate-bg]{cursor:crosshair}
+.proposal-map .plan-svg [data-move-station]:hover rect.area-shape{fill:#f7efd5;stroke:#ac7b24;stroke-width:4}
+@media(max-width:700px){.coord-input{width:74px}.move-select{max-width:100%}}

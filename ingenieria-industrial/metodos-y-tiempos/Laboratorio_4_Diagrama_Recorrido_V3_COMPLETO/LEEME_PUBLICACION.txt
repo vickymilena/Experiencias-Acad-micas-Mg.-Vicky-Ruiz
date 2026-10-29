@@ -1,4 +1,4 @@
-LABORATORIO 4: DIAGRAMA DE RECORRIDO — VERSIÓN 3
+LABORATORIO 4: DIAGRAMA DE RECORRIDO — VERSIÓN 4 · CORRECCIÓN DE RECORRIDOS Y DISTRIBUCIÓN
 Docente: Mg. Vicky Ruiz
 
 CONTENIDO
@@ -26,7 +26,12 @@ FUNCIONAMIENTO DIDÁCTICO
 - El enlace a Draw.io abre otra pestaña. Descarga la plantilla .drawio
   y ábrela con Archivo > Abrir desde > Dispositivo.
 - Los prompts de IA pueden copiarse y reutilizarse con otros procesos.
-- Los mapas pueden descargarse como PNG y el informe como DOCX.
+- Los diagramas muestran las actividades con símbolos, rutas numeradas y flechas.
+- La escena de mejora permite mover CUALQUIERA de las siete estaciones mediante clic en el plano o ingresando coordenadas x, y. Valida separaciones y rutas.
+- El ejemplo Suela junto a Costura se prueba eligiendo SU y posición (15, 1) m.
+- La espera KT-04 se representa en el kit. El caso de calzado no registra esperas; observaciones adicionales se marcan por verificar.
+- Los mapas se descargan como PNG de alta resolución o SVG vectorial; el nombre del estudiante aparece dentro del plano.
+- El informe Word incluye nombre del estudiante, imágenes en alta resolución, movimientos de estaciones y cuadro comparativo de seis transportes.
 
 PUBLICAR EN GITHUB PAGES
 1. Ve al repositorio de experiencias académicas.

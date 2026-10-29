@@ -34,9 +34,11 @@ async function exportDOCX(kind){
   body+=wt(['Ruta','Actividades ubicadas','Transportes trazados','Distancia simulada (m)'],['cap','sole','shoe'].map(k=>[STAGE_CFG[k].name,stageState(k).step+'/'+STAGE_CFG[k].items.length,Object.keys(stageState(k).routes).length+'/'+STAGE_CFG[k].items.filter(x=>x.type==='T').length,short(stageTotal(k))]));
   body+=wp('Total de recorridos actuales trazados: '+short(actualDist())+' m. Solo se contabilizaron los transportes dibujados hasta el momento.');
   body+=wp('5. MÉTODO PROPUESTO · ESCENARIO DIDÁCTICO','Heading1');body+=wpict('rId3',3,3660000);
-  const a=actualDist(),b=proposedDist();body+=wp('Estación acabado: '+(S.proposal==='new'?'ensayo de reubicación a (24, 7) metros':'ubicación inicial, sin traslado')+'.');
+  const a=actualDist(),b=proposedDist();const moves=Object.entries(S.positions||{}).map(([id,pos])=>`${areaName(id,'cap')}: (${STATIONS[id].x}, ${STATIONS[id].y}) m → (${pos.x}, ${pos.y}) m`);body+=wp('Estaciones reubicadas por el estudiante: '+(moves.length?moves.join('; '):'Ninguna; planta original')+'.');
   body+=wp('Distancia actual: '+(stagesComplete()?short(a)+' m':'Incompleta')+'. Distancia propuesta: '+(b===null?'No calculable':short(b)+' m')+'. Cambio: '+(b!==null&&a>0?short((a-b)/a*100)+' %':'No calculable')+'.');
   body+=wp('La reducción geométrica de trayectos NO demuestra por sí sola ahorro de tiempo, costos o cumplimiento de requisitos de seguridad.');
+  body+=wp('Esperas: el kit escolar incluye KT-04 (2 minutos). En el cursograma original del calzado no se describen esperas. Las observaciones añadidas por el estudiante son hipótesis pendientes de verificación: '+((S.extraWaits||[]).map((v,i)=>'E'+(i+1)+' en '+STATIONS[v.area].name+' ('+(v.duration==null?'NI':v.duration)+' minutos)').join('; ')||'ninguna')+'.');
+  const pr=resultForProposal();if(pr)body+=wt(['Transporte','Actual (m)','Propuesto (m)','Diferencia (m)'],Object.entries(allRoutes()).map(([code,r])=>[code,short(r.dist),pr[code]?short(pr[code].dist):'NM',pr[code]?short(r.dist-pr[code].dist):'NM']));
   body+=wp('6. DIAGNÓSTICO Y PROPUESTA','Heading1');body+=wp('Problemas observados: '+(S.diagnosis||'Sin desarrollar'));
   body+=wp('Hipótesis de mejora: '+(S.hypothesis||'Sin desarrollar'));
   body+=wp('Decisión y restricciones: '+(S.proposalText||'Sin desarrollar'));
