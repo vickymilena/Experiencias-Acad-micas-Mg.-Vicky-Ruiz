@@ -1,0 +1,60 @@
+LABORATORIO 4: DIAGRAMA DE RECORRIDO — VERSIÓN 3
+Docente: Mg. Vicky Ruiz
+
+CONTENIDO
+index.html          Entrada al laboratorio
+styles.css          Diseño visual y adaptación móvil
+app.js              Navegación, prácticas y cálculo de recorridos
+data_prompts.js     Actividades, datos de cursograma y prompts para IA
+docx_export.js      Generación local del informe Word editable
+assets/             Casos Word y plantilla de seis páginas para Draw.io
+
+ABRIR EN TU COMPUTADOR
+1. Descomprime el paquete completo.
+2. Abre index.html con Chrome o Edge.
+3. Mantén juntos index.html, los archivos .js, styles.css y la carpeta assets.
+4. Completa el registro de nombre y recorre las 15 escenas.
+
+FUNCIONAMIENTO DIDÁCTICO
+- La escena 2 explica qué es el diagrama de recorrido.
+- Antes del calzado, se explica un ejemplo cotidiano y la escala.
+- El kit escolar se construye en la aplicación, actividad por actividad.
+- Luego se construyen dentro de la plataforma las tres rutas de calzado:
+  capellada, suela y zapato después de ensamble.
+- El plano consolidado y la propuesta se evalúan antes de llegar a Draw.io.
+- Draw.io es una aplicación posterior y opcional para formalizar planos editables.
+- El enlace a Draw.io abre otra pestaña. Descarga la plantilla .drawio
+  y ábrela con Archivo > Abrir desde > Dispositivo.
+- Los prompts de IA pueden copiarse y reutilizarse con otros procesos.
+- Los mapas pueden descargarse como PNG y el informe como DOCX.
+
+PUBLICAR EN GITHUB PAGES
+1. Ve al repositorio de experiencias académicas.
+2. Entra en ingenieria-industrial/metodos-y-tiempos.
+3. Crea la carpeta laboratorio-4-diagrama-recorrido.
+4. Sube TODOS los archivos de este paquete dentro de ella,
+   incluyendo la carpeta assets.
+5. Confirma el cambio (Commit changes).
+6. Verifica que Pages esté activado en Settings > Pages.
+7. Abre la dirección del index.html dentro de esa carpeta.
+8. Agrega el enlace al índice de la asignatura.
+9. Para actualizar, reemplaza los archivos y confirma el cambio.
+
+PUBLICAR EN NETLIFY
+1. Descomprime el archivo ZIP.
+2. Abre https://app.netlify.com/drop.
+3. Arrastra la carpeta que contiene index.html y los archivos asociados.
+4. Obtén el enlace público. Para actualizar, arrastra la carpeta nueva.
+
+ALMACENAMIENTO Y PRIVACIDAD
+El avance se guarda en el navegador local si el almacenamiento está habilitado.
+No existe servidor ni base de datos de entregas. Los archivos adjuntos
+se procesan localmente mientras la pestaña está abierta. Para evaluar y
+almacenar notas, usa Moodle u otro sistema institucional autorizado.
+Los enlaces a Draw.io y el uso de IA externa requieren conexión a internet.
+
+ALCANCE DE LA VALIDACIÓN
+La plataforma calcula recorridos didácticos sobre un plano y obstáculos
+esquemáticos. Las cifras no provienen de mediciones de una planta real.
+La revisión de XML .drawio NO equivale a una auditoría de seguridad,
+medición industrial ni validación geométrica integral.

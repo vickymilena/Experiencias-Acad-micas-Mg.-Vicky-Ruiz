@@ -1,0 +1,63 @@
+// Generación DOCX local, sin servicios externos ni bibliotecas CDN.
+const utf8=new TextEncoder();function crc32(a){let c=0xffffffff;for(const x of a){c^=x;for(let j=0;j<8;j++)c=c&1?(c>>>1)^0xedb88320:c>>>1;}return(c^0xffffffff)>>>0}
+function zipFiles(files){let parts=[],cent=[],offset=0;for(const [name,bytes] of files){const fn=utf8.encode(name),data=typeof bytes==='string'?utf8.encode(bytes):bytes,crc=crc32(data);let h=new Uint8Array(30+fn.length),v=new DataView(h.buffer);v.setUint32(0,0x04034b50,true);v.setUint16(4,20,true);v.setUint32(14,crc,true);v.setUint32(18,data.length,true);v.setUint32(22,data.length,true);v.setUint16(26,fn.length,true);h.set(fn,30);parts.push(h,data);let c=new Uint8Array(46+fn.length),w=new DataView(c.buffer);w.setUint32(0,0x02014b50,true);w.setUint16(4,20,true);w.setUint16(6,20,true);w.setUint32(16,crc,true);w.setUint32(20,data.length,true);w.setUint32(24,data.length,true);w.setUint16(28,fn.length,true);w.setUint32(42,offset,true);c.set(fn,46);cent.push(c);offset+=h.length+data.length;}const size=cent.reduce((s,c)=>s+c.length,0),end=new Uint8Array(22),e=new DataView(end.buffer);e.setUint32(0,0x06054b50,true);e.setUint16(8,files.length,true);e.setUint16(10,files.length,true);e.setUint32(12,size,true);e.setUint32(16,offset,true);return new Blob([...parts,...cent,end],{type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'})}
+function xe(x){return String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function wp(t,sty='Normal'){return `<w:p><w:pPr><w:pStyle w:val="${sty}"/><w:spacing w:after="140"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Arial" w:hAnsi="Arial"/><w:sz w:val="22"/></w:rPr><w:t xml:space="preserve">${xe(t)}</w:t></w:r></w:p>`}
+function wt(head,rows){let cell=(v,b)=>`<w:tc><w:tcPr>${b?'<w:shd w:fill="E5EFF0"/>':''}<w:tcW w:w="0" w:type="auto"/></w:tcPr><w:p><w:pPr><w:spacing w:after="35"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Arial" w:hAnsi="Arial"/>${b?'<w:b/>':''}<w:sz w:val="19"/></w:rPr><w:t xml:space="preserve">${xe(v)}</w:t></w:r></w:p></w:tc>`;return `<w:tbl><w:tblPr><w:tblBorders>${['top','bottom','left','right','insideH','insideV'].map(x=>`<w:${x} w:val="single" w:sz="4" w:color="C7D6DB"/>`).join('')}</w:tblBorders></w:tblPr>${[head,...rows].map((r,i)=>`<w:tr>${r.map(x=>cell(x,i===0)).join('')}</w:tr>`).join('')}</w:tbl>`}
+function wpict(id,n,cy=3460000){return `<w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0"><wp:extent cx="5500000" cy="${cy}"/><wp:docPr id="${n}" name="Plano ${n}"/><a:graphic><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic><pic:nvPicPr><pic:cNvPr id="${n}" name="plano${n}.png"/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="${id}"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="5500000" cy="${cy}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r></w:p>`}
+async function exportDOCX(kind){
+ try{
+  if(!ready())throw Error('Registra tu nombre en la portada.');
+  if(kind==='final'){
+   if(stageState('kit').step!==8||!stagesComplete())throw Error('Para el informe definitivo, termina las ocho actividades del kit y las veintidós del caso industrial.');
+   const missing=S.answers.map((v,i)=>String(v||'').trim().length<18?i+1:0).filter(Boolean);
+   if(missing.length)throw Error('Completa las respuestas '+missing.join(', ')+' con argumentos antes de generar tu informe definitivo.');
+  }
+  showMsg('Preparando tu informe Word con las imágenes de las tres experiencias...');
+  const kit=new Uint8Array(await (await toPNG(diagramSVG('kit'))).arrayBuffer());
+  const current=new Uint8Array(await (await toPNG(diagramSVG('cap',{merge:true}))).arrayBuffer());
+  const proposed=new Uint8Array(await (await toPNG(diagramSVG('cap',{proposal:true}))).arrayBuffer());
+  const imagesArr=[['word/media/kit.png',kit],['word/media/current.png',current],['word/media/proposed.png',proposed]];
+  const rels=[['rId1','media/kit.png'],['rId2','media/current.png'],['rId3','media/proposed.png']];
+  let body=wp(kind==='final'?'INFORME FINAL · DIAGRAMA DE RECORRIDO':'INFORME PRELIMINAR · DIAGRAMA DE RECORRIDO','Title');
+  body+=wp('Métodos y Tiempos · Ingeniería Industrial','Subtitle');
+  body+=wp('Estudiante: '+S.name);body+=wp('Fecha: '+new Date().toLocaleDateString('es-CO'));
+  body+=wp('Docente: Mg. Vicky Ruiz');
+  body+=wp('1. ALCANCE Y FUNDAMENTO','Heading1');
+  body+=wp('El diagrama de recorrido representa las actividades y trayectorias de materiales sobre un plano. Se presentan dos casos didácticos: kit escolar y Calzados del Caribe S.A.S., empresa ficticia. Se utiliza un trazado a escala simulada. Las distancias no corresponden a mediciones de una planta real.');
+  body+=wp('2. KIT ESCOLAR · CONSTRUCCIÓN EN LA PLATAFORMA','Heading1');
+  body+=wp('Actividades realizadas: '+stageState('kit').step+'/8. Transportes: '+Object.keys(stageState('kit').routes).length+'/2. Distancia de las rutas trazadas: '+short(stageTotal('kit'))+' m. Las distancias del caso de referencia son 4 m y 3 m.');body+=wpict('rId1',1,4800000);
+  body+=wp('3. CURSOGRAMA ANALÍTICO DEL CASO INDUSTRIAL','Heading1');
+  body+=wt(['Código','Actividad','Tipo','Estación','Tiempo'],Object.entries(STAGE_CFG).filter(([k])=>k!=='kit').flatMap(([k,c])=>c.items.map(x=>[x.id,x.label,TYPES[x.type],areaName(x.place,k),x.time==null?'NI':short(x.time)+' min'])));
+  body+=wp('El cursograma contiene 22 actividades y seis transportes. Los 91 minutos de actividades no constituyen la duración total real, porque capellada y suela se preparan en paralelo.');
+  body+=wp('4. MÉTODO ACTUAL · DIAGRAMA CONSOLIDADO','Heading1');body+=wpict('rId2',2,3660000);
+  body+=wt(['Ruta','Actividades ubicadas','Transportes trazados','Distancia simulada (m)'],['cap','sole','shoe'].map(k=>[STAGE_CFG[k].name,stageState(k).step+'/'+STAGE_CFG[k].items.length,Object.keys(stageState(k).routes).length+'/'+STAGE_CFG[k].items.filter(x=>x.type==='T').length,short(stageTotal(k))]));
+  body+=wp('Total de recorridos actuales trazados: '+short(actualDist())+' m. Solo se contabilizaron los transportes dibujados hasta el momento.');
+  body+=wp('5. MÉTODO PROPUESTO · ESCENARIO DIDÁCTICO','Heading1');body+=wpict('rId3',3,3660000);
+  const a=actualDist(),b=proposedDist();body+=wp('Estación acabado: '+(S.proposal==='new'?'ensayo de reubicación a (24, 7) metros':'ubicación inicial, sin traslado')+'.');
+  body+=wp('Distancia actual: '+(stagesComplete()?short(a)+' m':'Incompleta')+'. Distancia propuesta: '+(b===null?'No calculable':short(b)+' m')+'. Cambio: '+(b!==null&&a>0?short((a-b)/a*100)+' %':'No calculable')+'.');
+  body+=wp('La reducción geométrica de trayectos NO demuestra por sí sola ahorro de tiempo, costos o cumplimiento de requisitos de seguridad.');
+  body+=wp('6. DIAGNÓSTICO Y PROPUESTA','Heading1');body+=wp('Problemas observados: '+(S.diagnosis||'Sin desarrollar'));
+  body+=wp('Hipótesis de mejora: '+(S.hypothesis||'Sin desarrollar'));
+  body+=wp('Decisión y restricciones: '+(S.proposalText||'Sin desarrollar'));
+  body+=wp('7. ARGUMENTACIÓN FINAL','Heading1');
+  const prompts=['Problemas detectados','Cambios planteados y motivo','Resultados medibles','Comprobaciones antes de implementar'];
+  prompts.forEach((x,i)=>body+=wp((i+1)+'. '+x+': '+(S.answers[i]||'No respondido')));
+  body+=wp('8. REVISIÓN CON INTELIGENCIA ARTIFICIAL','Heading1');body+=wp(S.aiNotes||'El estudiante no registró observaciones de revisión externa.');
+  body+=wp('9. INFORMACIÓN SOBRE LA VERIFICACIÓN','Heading1');body+=wp(S.fileCheck||'No se cargó un archivo Draw.io para comprobar códigos.');
+  body+=wp('La revisión automática de XML no verifica rutas, obstáculos ni distancias del archivo externo; estos elementos requieren revisión visual.');
+  let n=4;
+  for(const [key,title] of [['drawA','ANEXO · PLANO ACTUAL DE DRAW.IO'],['drawB','ANEXO · PLANO PROPUESTO DE DRAW.IO']]){
+   if(images[key]){const path=`word/media/${key}.png`,rid=`rId${n}`;imagesArr.push([path,images[key]]);rels.push([rid,`media/${key}.png`]);body+=wp(title,'Heading1')+wpict(rid,n);n++}
+  }
+  body+=wp('Mg. Vicky Ruiz');
+  const styles=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:rPr><w:rFonts w:ascii="Arial" w:hAnsi="Arial"/><w:sz w:val="22"/></w:rPr></w:style><w:style w:type="paragraph" w:styleId="Heading1"><w:name w:val="Heading 1"/><w:rPr><w:b/><w:color w:val="176B80"/><w:sz w:val="28"/></w:rPr></w:style><w:style w:type="paragraph" w:styleId="Title"><w:name w:val="Title"/><w:rPr><w:b/><w:color w:val="112A46"/><w:sz w:val="34"/></w:rPr></w:style><w:style w:type="paragraph" w:styleId="Subtitle"><w:name w:val="Subtitle"/><w:rPr><w:color w:val="303A46"/><w:sz w:val="23"/></w:rPr></w:style></w:styles>`;
+  const xml=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><w:body>${body}<w:sectPr><w:pgSz w:w="12240" w:h="15840"/><w:pgMar w:top="900" w:right="800" w:bottom="900" w:left="800"/></w:sectPr></w:body></w:document>`;
+  const types=`<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Default Extension="png" ContentType="image/png"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/></Types>`;
+  const pkg=`<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>`;
+  const rel=`<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">${rels.map(([rid,f])=>`<Relationship Id="${rid}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="${f}"/>`).join('')}<Relationship Id="rId90" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`;
+  downloadBlob(zipFiles([['[Content_Types].xml',types],['_rels/.rels',pkg],['word/document.xml',xml],['word/_rels/document.xml.rels',rel],['word/styles.xml',styles],...imagesArr]),`${kind==='final'?'Informe_Final':'Informe_Preliminar'}_Diagrama_Recorrido_${fname(S.name)}.docx`);
+  showMsg('Informe Word descargado correctamente.');
+ }catch(err){console.error(err);showMsg('No se pudo crear el Word: '+err.message,true);const el=document.getElementById('finalFeedback');if(el)el.innerHTML=`<div class="bad">${esc(err.message)}</div>`}
+}
+render();
