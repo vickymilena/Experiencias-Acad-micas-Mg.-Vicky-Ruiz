@@ -1,65 +1,39 @@
-LABORATORIO 4: DIAGRAMA DE RECORRIDO — VERSIÓN 4 · CORRECCIÓN DE RECORRIDOS Y DISTRIBUCIÓN
-Docente: Mg. Vicky Ruiz
+LABORATORIO 4 · DIAGRAMA DE RECORRIDO · VERSIÓN 5
+Mg. Vicky Ruiz · Métodos y Tiempos
 
 CONTENIDO
-index.html          Entrada al laboratorio
-styles.css          Diseño visual y adaptación móvil
-app.js              Navegación, prácticas y cálculo de recorridos
-data_prompts.js     Actividades, datos de cursograma y prompts para IA
-docx_export.js      Generación local del informe Word editable
-assets/             Casos Word y plantilla de seis páginas para Draw.io
+- index.html: aplicación con 15 escenas y las tres rutas industriales interactivas.
+- styles.css, app.js, data_prompts.js, docx_export.js: archivos necesarios de la aplicación.
+- assets/Caso_Kit_Escolar_Cursograma_Analitico_Resuelto.docx
+- assets/Caso_Calzados_del_Caribe_Lab3_Con_Esperas.docx: caso industrial que incorpora cuatro esperas del cursograma del laboratorio 3.
+- assets/Plantilla_Calzados_6_Paginas.drawio: seis páginas editables para Draw.io.
 
-ABRIR EN TU COMPUTADOR
-1. Descomprime el paquete completo.
-2. Abre index.html con Chrome o Edge.
-3. Mantén juntos index.html, los archivos .js, styles.css y la carpeta assets.
-4. Completa el registro de nombre y recorre las 15 escenas.
+CAMBIOS V5
+1. Se retoma el cursograma del laboratorio 3 recibido como imagen: 7 actividades de capellada, 6 de suela y 13 de la rama común; 26 en total.
+2. Se incorporan las esperas CA-04 (4 min), SU-03 (3 min), SU-06 (20 min) y ZA-03 (6 min) en secuencia y sobre el plano.
+3. Los transportes correctos son CA-03, CA-07, SU-05, ZA-05, ZA-09, ZA-12. Las distancias anotadas en la captura del laboratorio 3 suman 59 m.
+4. En el método actual consolidado y el propuesto aparece una tabla con coordenadas X/Y y dimensiones de las siete estaciones. El propio plano indica la posición.
+5. La comparación recalcula las seis rutas para la geometría didáctica. Sus distancias NO se confunden con las distancias del cursograma anterior.
+6. El Word del caso se revisó para mantener correspondencia con 26 actividades y cuatro esperas; el informe del estudiante incluye posiciones.
 
-FUNCIONAMIENTO DIDÁCTICO
-- La escena 2 explica qué es el diagrama de recorrido.
-- Antes del calzado, se explica un ejemplo cotidiano y la escala.
-- El kit escolar se construye en la aplicación, actividad por actividad.
-- Luego se construyen dentro de la plataforma las tres rutas de calzado:
-  capellada, suela y zapato después de ensamble.
-- El plano consolidado y la propuesta se evalúan antes de llegar a Draw.io.
-- Draw.io es una aplicación posterior y opcional para formalizar planos editables.
-- El enlace a Draw.io abre otra pestaña. Descarga la plantilla .drawio
-  y ábrela con Archivo > Abrir desde > Dispositivo.
-- Los prompts de IA pueden copiarse y reutilizarse con otros procesos.
-- Los diagramas muestran las actividades con símbolos, rutas numeradas y flechas.
-- La escena de mejora permite mover CUALQUIERA de las siete estaciones mediante clic en el plano o ingresando coordenadas x, y. Valida separaciones y rutas.
-- El ejemplo Suela junto a Costura se prueba eligiendo SU y posición (15, 1) m.
-- La espera KT-04 se representa en el kit. El caso de calzado no registra esperas; observaciones adicionales se marcan por verificar.
-- Los mapas se descargan como PNG de alta resolución o SVG vectorial; el nombre del estudiante aparece dentro del plano.
-- El informe Word incluye nombre del estudiante, imágenes en alta resolución, movimientos de estaciones y cuadro comparativo de seis transportes.
+USO EN COMPUTADOR
+Descomprime el ZIP y abre index.html con Chrome o Edge. No separes index.html de styles.css, app.js, docx_export.js, data_prompts.js ni de la carpeta assets.
 
-PUBLICAR EN GITHUB PAGES
-1. Ve al repositorio de experiencias académicas.
-2. Entra en ingenieria-industrial/metodos-y-tiempos.
-3. Crea la carpeta laboratorio-4-diagrama-recorrido.
-4. Sube TODOS los archivos de este paquete dentro de ella,
-   incluyendo la carpeta assets.
-5. Confirma el cambio (Commit changes).
-6. Verifica que Pages esté activado en Settings > Pages.
-7. Abre la dirección del index.html dentro de esa carpeta.
-8. Agrega el enlace al índice de la asignatura.
-9. Para actualizar, reemplaza los archivos y confirma el cambio.
+PUBLICACIÓN GITHUB PAGES (RECOMENDADO)
+1. Abre el repositorio donde tienes la asignatura Métodos y Tiempos.
+2. Entra a ingenieria-industrial/metodos-y-tiempos/laboratorio-4-diagrama-recorrido.
+3. Sustituye index.html, styles.css, app.js, data_prompts.js, docx_export.js y la carpeta assets por los nuevos archivos, conservando nombres y estructura.
+4. Confirma los cambios (Commit changes).
+5. Abre la página pública de GitHub Pages y usa actualización forzada Ctrl+F5 si se ve una versión anterior.
+6. Para futuras correcciones, vuelve a reemplazar los archivos modificados en esa misma carpeta.
 
-PUBLICAR EN NETLIFY
-1. Descomprime el archivo ZIP.
-2. Abre https://app.netlify.com/drop.
-3. Arrastra la carpeta que contiene index.html y los archivos asociados.
-4. Obtén el enlace público. Para actualizar, arrastra la carpeta nueva.
+PUBLICACIÓN NETLIFY
+1. Entra a https://app.netlify.com/drop
+2. Arrastra la carpeta que contiene index.html y assets, junto con los archivos .js y .css.
+3. Utiliza el enlace que Netlify proporcione.
+4. Para actualizar, vuelve a publicar la carpeta corregida.
 
-ALMACENAMIENTO Y PRIVACIDAD
-El avance se guarda en el navegador local si el almacenamiento está habilitado.
-No existe servidor ni base de datos de entregas. Los archivos adjuntos
-se procesan localmente mientras la pestaña está abierta. Para evaluar y
-almacenar notas, usa Moodle u otro sistema institucional autorizado.
-Los enlaces a Draw.io y el uso de IA externa requieren conexión a internet.
-
-ALCANCE DE LA VALIDACIÓN
-La plataforma calcula recorridos didácticos sobre un plano y obstáculos
-esquemáticos. Las cifras no provienen de mediciones de una planta real.
-La revisión de XML .drawio NO equivale a una auditoría de seguridad,
-medición industrial ni validación geométrica integral.
+NOTAS
+El laboratorio utiliza datos guardados localmente en el navegador para el avance, no una base de datos ni almacenamiento de notas o respuestas en servidor. Para recolectar entregas utiliza Moodle o una integración adicional autorizada.
+Draw.io e IA externa requieren conexión a internet. En el HTML, la generación de planos y Word se hace sin conexión a servicios externos.
+Las dimensiones de la planta y la geometría son didácticas. Las distancias del cursograma del laboratorio 3 no deben copiarse como si hubieran sido medidas en el plano simulado.

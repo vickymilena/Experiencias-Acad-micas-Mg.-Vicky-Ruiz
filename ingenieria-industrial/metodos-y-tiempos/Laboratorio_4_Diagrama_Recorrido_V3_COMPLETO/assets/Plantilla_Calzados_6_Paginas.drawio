@@ -442,7 +442,7 @@
         <mxCell id="1_legend" value="LEYENDA Y CRITERIOS" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#176B80;strokeColor=#176B80;fontColor=#112A46;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;fontColor=#FFFFFF;" vertex="1" parent="1">
           <mxGeometry x="682" y="125" width="345" height="32" as="geometry"/>
         </mxCell>
-        <mxCell id="1_hint" value="Ubica seis actividades y dibuja sus dos transportes." style="rounded=0;whiteSpace=wrap;html=0;fillColor=#f7f4ec;strokeColor=#ded3b9;fontColor=#112A46;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="1_hint" value="Ubica siete actividades, incluida una espera, y traza dos transportes." style="rounded=0;whiteSpace=wrap;html=0;fillColor=#f7f4ec;strokeColor=#ded3b9;fontColor=#112A46;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="682" y="168" width="345" height="70" as="geometry"/>
         </mxCell>
         <mxCell id="1_s1" value="◯ Operación     □ Inspección&#10;→ Transporte     D Espera     ▽ Almacenaje" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#c7d9dc;fontColor=#112A46;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;fontStyle=0;" vertex="1" parent="1">
@@ -672,7 +672,7 @@
         <mxCell id="2_legend" value="LEYENDA Y CRITERIOS" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#176B80;strokeColor=#176B80;fontColor=#112A46;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;fontColor=#FFFFFF;" vertex="1" parent="1">
           <mxGeometry x="682" y="125" width="345" height="32" as="geometry"/>
         </mxCell>
-        <mxCell id="2_hint" value="Ubica cuatro actividades y dibuja un transporte." style="rounded=0;whiteSpace=wrap;html=0;fillColor=#f7f4ec;strokeColor=#ded3b9;fontColor=#112A46;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="2_hint" value="Ubica seis actividades, incluidas dos esperas, y traza un transporte." style="rounded=0;whiteSpace=wrap;html=0;fillColor=#f7f4ec;strokeColor=#ded3b9;fontColor=#112A46;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="682" y="168" width="345" height="70" as="geometry"/>
         </mxCell>
         <mxCell id="2_s1" value="◯ Operación     □ Inspección&#10;→ Transporte     D Espera     ▽ Almacenaje" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#c7d9dc;fontColor=#112A46;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;fontStyle=0;" vertex="1" parent="1">
@@ -902,7 +902,7 @@
         <mxCell id="3_legend" value="LEYENDA Y CRITERIOS" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#176B80;strokeColor=#176B80;fontColor=#112A46;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;fontColor=#FFFFFF;" vertex="1" parent="1">
           <mxGeometry x="682" y="125" width="345" height="32" as="geometry"/>
         </mxCell>
-        <mxCell id="3_hint" value="Ubica doce actividades y dibuja tres transportes." style="rounded=0;whiteSpace=wrap;html=0;fillColor=#f7f4ec;strokeColor=#ded3b9;fontColor=#112A46;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="3_hint" value="Ubica trece actividades, incluida la espera de inspector, y traza tres transportes." style="rounded=0;whiteSpace=wrap;html=0;fillColor=#f7f4ec;strokeColor=#ded3b9;fontColor=#112A46;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="682" y="168" width="345" height="70" as="geometry"/>
         </mxCell>
         <mxCell id="3_s1" value="◯ Operación     □ Inspección&#10;→ Transporte     D Espera     ▽ Almacenaje" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#c7d9dc;fontColor=#112A46;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;fontStyle=0;" vertex="1" parent="1">

@@ -1,6 +1,42 @@
 const KITEMS=[{n:1,a:'Reunir artículos del pedido',type:'O',place:'RE',time:3},{n:2,a:'Verificar los artículos',type:'I',place:'RE',time:1},{n:3,a:'Trasladar el conjunto a empaque',type:'T',place:'EM',from:'RE',time:1},{n:4,a:'Esperar la disponibilidad de bolsa',type:'E',place:'EM',time:2},{n:5,a:'Empacar el conjunto',type:'O',place:'EM',time:2},{n:6,a:'Inspeccionar el paquete',type:'I',place:'EM',time:.5},{n:7,a:'Trasladar el paquete al estante',type:'T',place:'PT',from:'EM',time:.5},{n:8,a:'Almacenar el paquete',type:'A',place:'PT',time:null}];
 const SYMBOLS={O:'◯',T:'→',I:'□',E:'ᴅ',A:'▽'};const TYPES={O:'Operación',T:'Transporte',I:'Inspección',E:'Espera',A:'Almacenamiento'};
-const EVENTS={cap:[['CA-01','Cortar las piezas de cuero','O','CU',10],['CA-02','Inspeccionar dimensiones y formas','I','CU',2],['CA-03','Transportar las piezas a costura','T','CO',2,'CU'],['CA-04','Coser la capellada','O','CO',15],['CA-05','Inspeccionar costuras y puntadas','I','CO',3],['CA-06','Transportar la capellada a ensamble','T','EN',2,'CO']],sole:[['SU-01','Cortar la suela de la lámina','O','SU',6],['SU-02','Inspeccionar forma y dimensiones','I','SU',2],['SU-03','Acondicionar superficie de unión','O','SU',5],['SU-04','Transportar la suela a ensamble','T','EN',2,'SU']],shoe:[['ZA-01','Aplicar adhesivo a capellada y suela','O','EN',4],['ZA-02','Unir y prensar los componentes','O','EN',12],['ZA-03','Inspeccionar adherencia y alineación','I','EN',3],['ZA-04','Transportar el zapato a acabado','T','AC',2,'EN'],['ZA-05','Pulir y limpiar la superficie','O','AC',8],['ZA-06','Incorporar plantilla interior','O','AC',2],['ZA-07','Inspeccionar condiciones finales','I','AC',4],['ZA-08','Transportar a empaque','T','EM',1,'AC'],['ZA-09','Envolver con papel protector','O','EM',1],['ZA-10','Empacar en caja de cartón','O','EM',3],['ZA-11','Transportar el zapato empacado al almacén','T','PT',2,'EM'],['ZA-12','Almacenar producto terminado','A','PT',null]]};
+const EVENTS={
+ cap:[
+ ['CA-01','Cortar las piezas de cuero','O','CU',10],
+ ['CA-02','Inspeccionar dimensiones y forma de las piezas','I','CU',2],
+ ['CA-03','Transportar las piezas de cuero hasta costura','T','CO',2,'CU'],
+ ['CA-04','Esperar disponibilidad del puesto de costura','E','CO',4],
+ ['CA-05','Coser las piezas para formar la capellada','O','CO',15],
+ ['CA-06','Inspeccionar puntadas y unión de la capellada','I','CO',3],
+ ['CA-07','Transportar la capellada al ensamble','T','EN',2,'CO']
+ ],
+ sole:[
+ ['SU-01','Cortar la suela de la lámina de caucho','O','SU',6],
+ ['SU-02','Inspeccionar forma y dimensiones de la suela','I','SU',2],
+ ['SU-03','Esperar disponibilidad del equipo de preparación','E','SU',3],
+ ['SU-04','Lijar la superficie de unión de la suela','O','SU',5],
+ ['SU-05','Transportar la suela al área de ensamble','T','EN',2,'SU'],
+ ['SU-06','Esperar la llegada de la capellada','E','EN',20]
+ ],
+ shoe:[
+ ['ZA-01','Aplicar adhesivo a las superficies de unión','O','EN',4],
+ ['ZA-02','Prensar la capellada y la suela','O','EN',12],
+ ['ZA-03','Esperar disponibilidad del inspector','E','EN',6],
+ ['ZA-04','Inspeccionar adherencia y alineación','I','EN',3],
+ ['ZA-05','Transportar el zapato al área de acabado','T','AC',2,'EN'],
+ ['ZA-06','Pulir y limpiar el zapato','O','AC',8],
+ ['ZA-07','Colocar la plantilla interior prefabricada','O','AC',2],
+ ['ZA-08','Realizar la inspección final del zapato','I','AC',4],
+ ['ZA-09','Transportar el zapato a empaque','T','EM',1,'AC'],
+ ['ZA-10','Envolver el zapato con papel protector','O','EM',1],
+ ['ZA-11','Introducir el zapato en la caja y cerrar','O','EM',3],
+ ['ZA-12','Llevar la caja al almacén y descargar','T','PT',2,'EM'],
+ ['ZA-13','Almacenar el zapato terminado','A','PT',null]
+ ]
+};
+const REFERENCE_DISTANCE={'CA-03':9,'CA-07':14,'SU-05':12,'ZA-05':8,'ZA-09':6,'ZA-12':10};
+const INDUSTRIAL_ACTIVITY_TOTAL=Object.values(EVENTS).reduce((n,arr)=>n+arr.length,0);
+const DOCUMENTED_WAITS=Object.values(EVENTS).flat().filter(e=>e[2]==='E');
 const AREAS={CU:'Corte de cuero',CO:'Costura',SU:'Preparación de suela',EN:'Ensamble',AC:'Acabado',EM:'Empaque',PT:'Almacén'};
 const PROMPTS={
 levantamiento:`Actúa como ingeniero industrial senior especializado en estudio de métodos, distribución de planta y levantamiento de información para diagramas de recorrido. Orienta mi trabajo con rigor. TODAVÍA NO DIBUJES NADA.
