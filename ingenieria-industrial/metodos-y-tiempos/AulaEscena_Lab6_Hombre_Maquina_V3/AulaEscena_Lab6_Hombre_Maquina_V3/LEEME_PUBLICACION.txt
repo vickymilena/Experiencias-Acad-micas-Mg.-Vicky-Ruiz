@@ -1,0 +1,41 @@
+AULAESCENA — LABORATORIO 6 · DIAGRAMA HOMBRE–MÁQUINA · VERSIÓN 3
+Mg. Vicky Ruiz
+
+CONTENIDO
+- index.html: aplicación interactiva de 16 escenas.
+- media/diagrama-hombre-maquina.mp4: video original para la actividad final.
+- Caso_Etiquetadoras_Estudiante.docx: caso completo, sin solucionario.
+- Plantilla_Hombre_Maquina_Blanco.xlsx: plantilla genérica en blanco con indicaciones y fórmula de duración.
+
+ABRIR EN EL COMPUTADOR
+1. Descomprimir el ZIP completo sin modificar las rutas internas.
+2. Abrir index.html en Chrome o Edge.
+3. Verificar que en la escena 15 se reproduzca media/diagrama-hombre-maquina.mp4.
+4. No abrir únicamente el index.html fuera de la carpeta: necesita video y archivos descargables.
+5. Conservar los archivos de resultados descargados en Excel y PNG.
+
+PUBLICAR CON GITHUB PAGES
+1. Entrar al repositorio donde ya se publican los laboratorios de Ingeniería Industrial / Métodos y Tiempos.
+2. Abrir la carpeta del laboratorio 6 existente; si no existe, crear laboratorio-6-hombre-maquina.
+3. Reemplazar index.html por la versión 3.
+4. Subir Caso_Etiquetadoras_Estudiante.docx y Plantilla_Hombre_Maquina_Blanco.xlsx junto a index.html.
+5. Crear o conservar media/ y subir allí diagrama-hombre-maquina.mp4 sin cambiar el nombre.
+6. Confirmar los cambios en el repositorio.
+7. Si aún no está configurado: Settings > Pages > Deploy from a branch > seleccionar la rama de publicación y carpeta raíz adecuada.
+8. Abrir la URL pública del laboratorio: https://USUARIO.github.io/REPOSITORIO/RUTA/laboratorio-6-hombre-maquina/
+9. Verificar la reproducción del video y los enlaces de Word y Excel. Actualizar después reemplazando los archivos correspondientes.
+
+PUBLICAR CON NETLIFY
+1. Acceder a https://app.netlify.com/drop
+2. Arrastrar la carpeta completa AulaEscena_Lab6_Hombre_Maquina_V3 que contiene index.html.
+3. Obtener el enlace público del sitio y comprobar video y descargas.
+4. Para actualizar, volver a desplegar la carpeta modificada en el mismo sitio.
+
+FUNCIONAMIENTO Y LIMITACIONES
+- El laboratorio funciona como aplicación estática sin servidor ni conexión con Moodle.
+- El contenido del video y los archivos Word/Excel se cargan de la misma carpeta relativa al HTML.
+- Se necesita internet para abrir una IA externa (ChatGPT, Gemini o Copilot). El estudiante debe copiar el prompt y pegarlo allí; esa IA no recibe información automáticamente.
+- El guardado de respuestas se mantiene solo en la sesión del navegador. Es responsabilidad del estudiante descargar su Excel e imagen.
+- Publicar HTML NO almacena automáticamente notas ni respuestas en una base de datos; para ello hace falta una integración adicional autorizada.
+- La revisión automática contrasta el caso de las etiquetadoras con una referencia docente. En el video solo verifica coherencia temporal, NO certifica que los estados internos de la máquina sean visibles.
+- Los subtiempos de descarga/carga son ilustrativos: M1 = 12,0 + 19,8 s y M2 = 18,0 + 28,8 s, respetando los totales originales del material base. M1 automático = 30,0 s, M2 automático = 37,8 s.
