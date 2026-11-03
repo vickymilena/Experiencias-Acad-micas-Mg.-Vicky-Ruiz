@@ -1,4 +1,3 @@
-
 /* Biblioteca automática | Mg. Vicky Ruiz
    Lee catalogo.json generado al publicar en GitHub Pages.
    Conserva las tarjetas existentes y añade solo las que faltan.
@@ -38,7 +37,7 @@
   const rutaAsignatura = (programa, asignatura) =>
     `${programa.ruta}/${asignatura.slug}`;
 
-  // Reconoce diferentes nombres de carpetas de laboratorios.
+  // Acepta nombres con guiones, guiones bajos o espacios, y rutas anidadas.
   function carpetaLaboratorio(enlace) {
     if (!enlace || /^(?:https?:|mailto:|javascript:|#)/i.test(enlace)) return '';
 
@@ -46,14 +45,17 @@
       .replace(/^\.\//, '')
       .replace(/\/+$/, '');
 
-    const partes = sinParametros.split('/');
+    const partes = sinParametros.split('/').filter(Boolean);
+    if (partes.length === 0) return '';
 
-    if (partes.at(-1)?.toLowerCase() === 'index.html') partes.pop();
-    if (partes.length !== 1) return '';
+    let nombre;
+    try {
+      nombre = decodeURIComponent(partes[0]);
+    } catch {
+      return '';
+    }
 
-    const nombre = partes[0];
-
-    return /^laboratorio[-_]+0*\d+(?:[-_][^/]+)?$/i.test(nombre)
+    return /^laboratorio[\s_-]+0*\d+(?:[\s_-]+[^/]+)?$/i.test(nombre)
       ? nombre : '';
   }
 
@@ -104,7 +106,12 @@
     const texto = crear('p', '', laboratorio.descripcion);
     const boton = crear('a', 'btn', 'Abrir laboratorio ↗');
 
-    boton.href = `./${encodeURIComponent(laboratorio.carpeta)}/index.html`;
+    // Página de entrada exacta, incluso si existe una subcarpeta adicional.
+    const segmentos = [
+      laboratorio.carpeta,
+      ...(laboratorio.pagina || 'index.html').split('/')
+    ];
+    boton.href = './' + segmentos.map(encodeURIComponent).join('/');
 
     tarjeta.append(insignia, encabezado, texto, boton);
     return tarjeta;
@@ -184,7 +191,6 @@
     for (const tarjeta of tarjetas.querySelectorAll(':scope > article')) {
       const enlace = tarjeta.querySelector('a[href]')?.getAttribute('href') || '';
       const carpeta = carpetaLaboratorio(enlace);
-
       if (carpeta) existentes.add(carpeta.toLowerCase());
     }
 
@@ -224,7 +230,10 @@
         const cuadricula = crear('div', 'cards');
 
         for (const laboratorio of asignatura.laboratorios) {
-          const enlace = new URL(`${laboratorio.ruta}/`, base).href;
+          const enlace = new URL(
+            `${laboratorio.ruta}/${laboratorio.pagina || 'index.html'}`,
+            base
+          ).href;
 
           cuadricula.append(tarjetaGeneral(
             laboratorio.titulo,
