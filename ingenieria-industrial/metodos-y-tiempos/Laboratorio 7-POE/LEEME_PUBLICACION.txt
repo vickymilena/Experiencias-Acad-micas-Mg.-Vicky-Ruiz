@@ -1,0 +1,40 @@
+AULAESCENA | LABORATORIO POE - RECONSTRUCCIÓN FINAL
+Mg. Vicky Ruiz | Ingeniería Industrial - Métodos y Tiempos
+
+CONTENIDO
+index.html: aplicación de 15 escenas.
+recursos/Caso_Kits_Escolares_POE_Escena_9.docx: caso para secuenciar el proceso.
+recursos/Caso_Completo_POE_Kits_Escolares_Escena_10.docx: caso integral para construir el POE.
+recursos/Guia_Auditoria_POE_Escena_13_Estudiantes.docx: guía para auditar el POE propio.
+
+ABRIR EN EL COMPUTADOR
+1. Descomprime el ZIP.
+2. Abre index.html con Chrome, Edge o Firefox.
+3. Conserva la carpeta recursos junto a index.html. No muevas los Word por separado.
+4. Escribe el nombre del estudiante y avanza por las escenas.
+
+GITHUB PAGES
+1. Entra en tu repositorio AulaEscena y abre la carpeta de Métodos y Tiempos.
+2. Crea una subcarpeta poe, si aún no existe.
+3. Sube index.html y la carpeta recursos dentro de poe, respetando los nombres de los archivos.
+4. Confirma los cambios (Commit changes).
+5. Verifica la configuración de Settings > Pages (rama y carpeta de publicación del sitio).
+6. Abre el enlace del laboratorio desde tu sitio e incorpora su URL al índice de métodos y tiempos.
+7. Para actualizarlo, sustituye index.html y, si cambian, los archivos de recursos; confirma nuevamente.
+
+NETLIFY
+1. Inicia sesión en Netlify.
+2. Elige despliegue manual de una carpeta web.
+3. Arrastra la carpeta descomprimida que contiene index.html y recursos.
+4. Abre la URL generada y prueba la descarga de un Word.
+5. Para actualizar, vuelve a desplegar esa misma carpeta en el sitio existente.
+
+NOTAS IMPORTANTES
+- La aplicación es estática. No necesita una cuenta del estudiante ni una API para funcionar.
+- El progreso se guarda localmente en el navegador, no en un servidor.
+- Publicar el HTML no almacena automáticamente respuestas ni notas para el docente.
+- Cada estudiante debe descargar y entregar sus evidencias siguiendo las instrucciones de su curso.
+- En computadores compartidos, usar «Nuevo estudiante» antes de registrar un nuevo nombre.
+- Las descargas Word y PDF se crean localmente en el navegador. El POE es un borrador académico, no un procedimiento aprobado para uso operativo.
+- La revisión con inteligencia artificial requiere abrir una herramienta externa; la página ofrece un prompt para copiar. Si no hay internet, puede completarse la reflexión guiada sin revisión externa.
+- La duración estimada de la ruta es aproximadamente 3 h 22 min, variable según el ritmo del estudiante.
