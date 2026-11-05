@@ -1,0 +1,41 @@
+AULAESCENA | MISIÓN MEJORA V5
+Estudio de métodos · Ingeniería Industrial
+Firma visible de cada escena: Mg. Vicky Ruiz
+
+ARCHIVO PRINCIPAL
+index.html: página autónoma con 18 escenas, guardado local, calculadora, actividades, generación de Word y exportación SVG/PNG. El contenido principal y los casos Word están incorporados en el propio HTML.
+
+DOCUMENTOS DE APOYO
+Brisa_Norte_Expediente_Estudiante.docx: datos del hilo conductor, sin soluciones.
+CicloRapido_Caso_Independiente_Estudiante.docx: reto de transferencia, sin soluciones.
+
+CÓMO ABRIR
+1. Extraiga el ZIP.
+2. Abra index.html con Chrome, Edge o Firefox.
+3. Escriba nombre y apellido en la portada.
+4. Para ampliar los cursogramas, use los botones +, -, Ajustar y Ampliar pantalla.
+5. Use SVG para ampliación sin pérdida de nitidez y PNG para imágenes de alta resolución.
+6. Descargue el informe Word parcial o final según el progreso.
+
+GITHUB PAGES
+1. Abra el repositorio donde guarda sus laboratorios.
+2. Dentro de Ingeniería Industrial / Métodos y Tiempos, cree una carpeta para este laboratorio si no existe.
+3. Cargue index.html en esa carpeta o sustituya el index.html anterior de este laboratorio.
+4. Pulse Commit changes.
+5. Compruebe en Settings > Pages que GitHub Pages esté habilitado en la rama/carpeta que publica.
+6. Abra la URL del sitio, agregando la ruta de la carpeta del laboratorio y una barra final.
+7. Para actualizar: reemplace el mismo index.html, conserve la ruta y confirme los cambios.
+
+NETLIFY
+1. Ingrese a https://app.netlify.com/.
+2. Use la opción de implementación manual o arrastre de carpeta.
+3. Arrastre la carpeta que contiene index.html (no solo el archivo Word).
+4. Copie el enlace generado.
+5. Para actualizar, despliegue de nuevo la carpeta modificada.
+
+IMPORTANTE
+El alojamiento del HTML NO almacena notas/respuestas de forma centralizada.
+El guardado local depende del navegador, equipo y políticas del usuario.
+El estudiante puede descargar Word y exportar una copia JSON para reanudar.
+El uso de IA externa requiere Internet, y la respuesta de IA debe copiarse/registrarse en el laboratorio.
+Los casos y mediciones de Brisa Norte y CicloRápido son ficticios.
