@@ -1,0 +1,53 @@
+AULAESCENA | THERBLIGS Y ECONOMÍA DE MOVIMIENTOS
+Mg. Vicky Ruiz
+
+CONTENIDO DEL PAQUETE
+- index.html: aplicación educativa de 16 escenas
+- assets/demostracion.mp4: video de los movimientos de Gilbreth
+- assets/metodos.mp4: video complementario de métodos y movimientos
+- assets/ergonomia.mp4: video del diagnóstico ergonómico
+- assets/taller.mp4: video del reto final de ensamble eléctrico
+- assets/clases.png, alcances.png, puesto.png: imágenes de referencia aportadas
+
+CÓMO ABRIRLA
+1. Extrae el archivo ZIP manteniendo las carpetas.
+2. Abre index.html en un navegador moderno (Chrome, Edge o Firefox).
+3. Registra nombre y apellido y completa el laboratorio.
+4. Para descargar resultados, utiliza la escena 16. También hay descarga del avance en la escena 13.
+5. Si el navegador restringe la reproducción desde el sistema de archivos, publica la carpeta en GitHub Pages o Netlify.
+
+GITHUB PAGES
+1. Abre tu repositorio de GitHub.
+2. Entra a la carpeta donde guardarás este laboratorio, por ejemplo: Ingenieria-Industrial/Metodos-y-Tiempos/Laboratorio-Therbligs/.
+3. Crea la ruta, si no existe, y sube index.html y la carpeta assets completa. No subas únicamente index.html.
+4. Verifica que en esa misma carpeta aparezca index.html y debajo assets/.
+5. Confirma la carga mediante Commit changes.
+6. Configura Settings > Pages para publicar la rama main desde la raíz, si todavía no está configurado.
+7. Abre el enlace publicado correspondiente a la ruta exacta del laboratorio.
+8. Para actualizar el laboratorio, reemplaza index.html y, si cambian, los archivos de assets; confirma nuevamente el commit.
+
+NETLIFY
+1. Accede a https://app.netlify.com/.
+2. Elige Add new project > Deploy manually (según interfaz disponible).
+3. Arrastra la carpeta AulaEscena_Therbligs completa, que debe contener index.html y assets/.
+4. Abre el enlace publicado por Netlify.
+5. Para actualizar, publica nuevamente la carpeta con los cambios.
+
+LIMITACIONES Y ALCANCE
+- No requiere conexión para reproducir videos locales cuando se abre correctamente el conjunto de archivos.
+- El progreso se guarda en el almacenamiento local del navegador; puede borrarse al limpiar datos o usar otro dispositivo.
+- Utiliza los botones de respaldo JSON para llevar los avances de un navegador a otro.
+- La aplicación no identifica los Therbligs mediante reconocimiento automático del video. El estudiante observa, marca y clasifica los movimientos; la aplicación calcula e ilustra los resultados.
+- El marcado de fotogramas es aproximado y depende del navegador.
+- Word (.docx), Excel (.xlsx) y diagrama (.svg) se descargan en el equipo. El diagrama se descarga por separado.
+- El archivo Word contiene los registros y resultados textuales; el gráfico SVG se entrega por separado para insertarlo cuando corresponda.
+- No envía respuestas ni calificaciones a Moodle, correo o un servidor. Eso requiere una integración autorizada.
+- Los símbolos del catálogo son dibujos didácticos aproximados; contrastar con las fuentes convencionales.
+- Los tiempos del caso del sándwich son ficticios y se utilizan exclusivamente para enseñar el método.
+
+COMPROBACIONES REALIZADAS
+- Comprobación de sintaxis JavaScript sin errores mediante Node.js.
+- Generación y lectura de archivos Word y Excel descargables en pruebas locales.
+- Verificación de los 16 generadores de escenas y cómputo de caso del sándwich (24 movimientos: 18 efectivos y 6 inefectivos).
+- Verificación de rutas de archivos de video e imagen dentro del paquete.
+- No se pudo ejecutar una prueba integral de interacción visual en navegador, por las restricciones de este entorno; probar antes de compartir con los estudiantes.
