@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#112A46">
+  <meta name="description" content="Laboratorio interactivo sobre derivados financieros: forward, futuros, opciones y swaps. Escuela de Finanzas desde Cero.">
+  <title>Derivados financieros | Escuela de Finanzas desde Cero</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell" id="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegación del laboratorio">
+      <div class="brand"><div class="brand-mark" aria-hidden="true">ƒ</div><div><strong>ESCUELA DE FINANZAS</strong><span>DESDE CERO</span></div></div>
+      <div class="course-tag">Finanzas corporativas internacionales</div>
+      <div class="side-kicker">RECORRIDO DE APRENDIZAJE</div>
+      <nav id="scene-nav" aria-label="Escenas"></nav>
+      <div class="side-footer"><span>Laboratorio <strong id="lab-number-side">03</strong></span><span>Mg. Vicky Ruiz</span></div>
+    </aside>
+    <div class="mobile-overlay" id="mobile-overlay" hidden></div>
+    <div class="main-layout">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" data-action="toggle-menu" aria-label="Abrir menú">☰</button>
+        <div class="top-title"><span class="eyebrow">LABORATORIO <span id="lab-number-top">03</span></span><strong>Derivados financieros</strong></div>
+        <div class="top-actions"><span id="top-student" class="student-chip">Sin registrar</span><button class="button button-ghost small" data-action="download" data-type="pdf">↓ PDF</button><button class="button button-outline small" data-action="download" data-type="docx">↓ Word</button></div>
+      </header>
+      <div class="progress-wrap" aria-label="Progreso"><div class="progress-track"><div id="overall-progress" class="progress-fill"></div></div><span id="progress-label">0 % recorrido</span></div>
+      <main id="scene-content" class="scene-container" tabindex="-1"></main>
+      <footer class="main-footer"><span>Aprende · Experimenta · Decide</span><span>Los valores del caso son ficticios, salvo referencias expresamente identificadas.</span></footer>
+    </div>
+  </div>
+  <section id="print-report" aria-hidden="true"></section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="restore-input" accept=".json,application/json" hidden>
+  <script src="vendor/jszip.min.js"></script>
+  <script src="exports.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
