@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -15,8 +15,10 @@
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;background:#fcfbf8;color:var(--ink);font-family:Inter,Arial,sans-serif;font-size:16px;line-height:1.6}
-    h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:Manrope,Inter,Arial,sans-serif;line-height:1.17;letter-spacing:-.035em}
-    a{color:inherit}a:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:4px}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:Manrope,Inter,Arial,sans-serif;line-height:1.17;letter-spacing:-.035em}
+    a{color:inherit}
+    a:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:4px}
     .wrap{width:min(1120px,calc(100% - 48px));margin:auto}
     .site-header{background:var(--white);border-bottom:1px solid #edf0f2;position:relative;z-index:10}
     .nav{min-height:85px;display:flex;align-items:center;justify-content:space-between;gap:20px}
@@ -25,7 +27,8 @@
     .brand-name{display:block;font-family:Manrope,sans-serif;color:var(--navy);font-weight:800;font-size:16px;letter-spacing:-.025em;line-height:1.25}
     .brand-by{display:block;font-size:12px;color:var(--muted);margin-top:2px}
     .nav-links{display:flex;align-items:center;gap:28px}
-    .nav-links a{text-decoration:none;font-size:13px;font-weight:700;color:var(--navy)}.nav-links a:hover{color:var(--teal)}
+    .nav-links a{text-decoration:none;font-size:13px;font-weight:700;color:var(--navy)}
+    .nav-links a:hover{color:var(--teal)}
     .hero{background:var(--navy);color:var(--white);overflow:hidden;position:relative}
     .hero::before{content:"";position:absolute;width:570px;height:570px;border:1px solid #ffffff18;border-radius:50%;right:-135px;top:-300px;box-shadow:0 0 0 110px #ffffff08,0 0 0 220px #ffffff05;pointer-events:none}
     .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(#fff 0.65px,transparent 0.65px);background-size:22px 22px;opacity:.045;pointer-events:none}
@@ -39,9 +42,11 @@
     .primary-link:hover{transform:translateY(-2px);filter:brightness(1.08)}
     .hero-note{padding:25px 25px 22px;border:1px solid #ffffff30;border-radius:19px;background:#ffffff0c;backdrop-filter:blur(3px);box-shadow:0 20px 55px #07192b35}
     .hero-note .small-title{color:#f0d490;font-size:12px;letter-spacing:.11em;text-transform:uppercase;font-weight:800;margin:0 0 17px}
-    .step{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid #ffffff20}.step:last-child{border:0;padding-bottom:0}
+    .step{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid #ffffff20}
+    .step:last-child{border:0;padding-bottom:0}
     .number{width:38px;height:38px;border:1px solid #e9c78399;border-radius:11px;color:#e9c783;display:grid;place-items:center;font-weight:800;font-family:Manrope;flex:none}
-    .step strong{display:block;font-size:14px;color:#fff;font-weight:700}.step small{display:block;color:#d2e0e6;font-size:12px;margin-top:2px}
+    .step strong{display:block;font-size:14px;color:#fff;font-weight:700}
+    .step small{display:block;color:#d2e0e6;font-size:12px;margin-top:2px}
     section.catalog{padding:70px 0 75px}
     .section-top{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:29px}
     .kicker{color:var(--teal);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.13em;margin:0 0 10px}
@@ -50,10 +55,13 @@
     .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px;align-items:stretch}
     .card{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0;box-shadow:0 8px 32px #112a4609;transition:transform .18s,box-shadow .18s}
     .card:hover{transform:translateY(-4px);box-shadow:0 16px 38px #112a4612}
-    .card-top{height:8px;background:var(--teal)}.card:nth-child(2) .card-top{background:#d6a84b}.card:nth-child(3) .card-top{background:#496c85}
+    .card-top{height:8px;background:var(--teal)}
+    .card:nth-child(2) .card-top{background:#d6a84b}
+    .card:nth-child(3) .card-top{background:#496c85}
     .card-inner{padding:27px 24px 25px;display:flex;flex-direction:column;flex:1}
     .card-icon{width:54px;height:54px;border-radius:14px;background:#eaf3f6;color:var(--teal);display:grid;place-items:center;margin-bottom:20px}
-    .card:nth-child(2) .card-icon{background:#fbf3e2;color:#a27423}.card:nth-child(3) .card-icon{background:#e9eff4;color:#496c85}
+    .card:nth-child(2) .card-icon{background:#fbf3e2;color:#a27423}
+    .card:nth-child(3) .card-icon{background:#e9eff4;color:#496c85}
     .state{display:inline-block;border-radius:100px;padding:5px 10px;background:#e8f5f2;color:#176b59;font-size:11px;font-weight:800;letter-spacing:.01em;align-self:flex-start;margin-bottom:14px}
     .state.future{background:#f0f1f3;color:#626b75}
     .card h3{color:var(--navy);font-size:21px;margin:0 0 12px}
@@ -67,14 +75,40 @@
     .message-strip{padding:20px 24px;border-radius:12px;background:#ecf2f3;border-left:4px solid var(--teal);color:var(--navy);font-size:13px;margin-top:24px}
     .about{background:var(--cream);padding:43px 0}
     .about-inner{display:flex;align-items:center;justify-content:space-between;gap:34px}
-    .about h2{font-size:24px;color:var(--navy);margin:0 0 8px}.about p{font-size:14px;max-width:730px;margin:0;color:#52606c}
+    .about h2{font-size:24px;color:var(--navy);margin:0 0 8px}
+    .about p{font-size:14px;max-width:730px;margin:0;color:#52606c}
     .signature{font-family:Manrope,sans-serif;color:var(--teal);font-weight:800;font-size:16px;white-space:nowrap}
     footer{background:var(--navy);padding:24px 0;color:#dce5ea;font-size:12px}
     .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
     .footer-inner strong{color:#fff}
-    @media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:26px;padding:50px 0}.hero-note{max-width:460px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.section-top{display:block}.section-top p{margin-top:14px}}
-    @media(max-width:640px){.wrap{width:min(100% - 32px,1120px)}.nav{min-height:75px}.brand-name{font-size:14px}.brand-symbol{width:41px;height:41px}.nav-links{gap:12px}.nav-links a{font-size:11px}.nav-links a:first-child{display:none}.hero-inner{padding:48px 0}.hero h1{font-size:35px}.hero p{font-size:14px}.hero-note{padding:19px}.cards{grid-template-columns:1fr}.section-top h2{font-size:28px}section.catalog{padding:48px 0}.about-inner,.footer-inner{flex-direction:column;align-items:flex-start;gap:16px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr;gap:26px;padding:50px 0}
+      .hero-note{max-width:460px}
+      .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .section-top{display:block}
+      .section-top p{margin-top:14px}
+    }
+    @media(max-width:640px){
+      .wrap{width:min(100% - 32px,1120px)}
+      .nav{min-height:75px}
+      .brand-name{font-size:14px}
+      .brand-symbol{width:41px;height:41px}
+      .nav-links{gap:12px}
+      .nav-links a{font-size:11px}
+      .nav-links a:first-child{display:none}
+      .hero-inner{padding:48px 0}
+      .hero h1{font-size:35px}
+      .hero p{font-size:14px}
+      .hero-note{padding:19px}
+      .cards{grid-template-columns:1fr}
+      .section-top h2{font-size:28px}
+      section.catalog{padding:48px 0}
+      .about-inner,.footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{transition:none!important;animation:none!important}
+    }
 
     /* Perfil profesional: conserva el diseño de la portada original */
     .nav-links a.active{color:var(--teal)}
@@ -92,96 +126,209 @@
     .social-inline{display:flex;gap:14px;flex-wrap:wrap;margin-top:17px}
     .social-inline a{font-size:12px;color:var(--teal);font-weight:800;text-decoration:underline;text-underline-offset:4px}
     .site-header .brand:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
-    @media(max-width:820px){.preview-layout{grid-template-columns:240px 1fr;gap:30px}.profile-preview{padding:55px 0}}
-    @media(max-width:650px){.nav-links{gap:10px;flex-wrap:wrap;justify-content:flex-end}.nav-links a{font-size:11px}.nav-links a:first-child{display:none}.preview-layout{grid-template-columns:1fr;gap:28px}.preview-photo{max-width:320px;aspect-ratio:4/4;margin:0 auto}.profile-preview{padding:48px 0}.preview-content h2{font-size:29px}}
-  .lesson-link + .lesson-link{margin-top:8px}
+    @media(max-width:820px){
+      .preview-layout{grid-template-columns:240px 1fr;gap:30px}
+      .profile-preview{padding:55px 0}
+    }
+    @media(max-width:650px){
+      .nav-links{gap:10px;flex-wrap:wrap;justify-content:flex-end}
+      .nav-links a{font-size:11px}
+      .nav-links a:first-child{display:none}
+      .preview-layout{grid-template-columns:1fr;gap:28px}
+      .preview-photo{max-width:320px;aspect-ratio:4/4;margin:0 auto}
+      .profile-preview{padding:48px 0}
+      .preview-content h2{font-size:29px}
+    }
+    .lesson-link + .lesson-link{margin-top:8px}
 </style>
 </head>
 <body id="inicio">
+
 <header class="site-header">
-<div class="wrap nav">
-<a aria-label="Ir al inicio de Experiencias Académicas" class="brand" href="#inicio">
-<span aria-hidden="true" class="brand-symbol"><svg fill="none" height="28" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="28"><path d="m12 7 8-4 1 14-9 4-9-4 1-14z"></path><path d="M12 7v14M4 4l8 4 8-4"></path></svg></span>
-<span><span class="brand-name">Experiencias Académicas</span><span class="brand-by">Mg. Vicky Ruiz</span></span>
-</a>
-<nav aria-label="Navegación principal" class="nav-links">
-<a href="#inicio">Inicio</a><a href="#experiencias">Experiencias</a><a href="sobre-mi.html">Sobre mí</a><a href="#acerca">El proyecto</a>
-</nav>
-</div>
+  <div class="wrap nav">
+    <a aria-label="Ir al inicio de Experiencias Académicas" class="brand" href="#inicio">
+      <span aria-hidden="true" class="brand-symbol">
+        <svg fill="none" height="28" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="28">
+          <path d="m12 7 8-4 1 14-9 4-9-4 1-14z"></path>
+          <path d="M12 7v14M4 4l8 4 8-4"></path>
+        </svg>
+      </span>
+      <span>
+        <span class="brand-name">Experiencias Académicas</span>
+        <span class="brand-by">Mg. Vicky Ruiz</span>
+      </span>
+    </a>
+    <nav aria-label="Navegación principal" class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#experiencias">Experiencias</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="#acerca">El proyecto</a>
+    </nav>
+  </div>
 </header>
+
 <main>
+
 <section aria-labelledby="hero-title" class="hero">
-<div class="wrap hero-inner">
-<div>
-<div class="eyebrow">Un espacio para aprender haciendo</div>
-<h1 id="hero-title">El conocimiento se comprende mejor cuando <span>se vive.</span></h1>
-<p>Explora experiencias académicas que convierten los conceptos en preguntas, decisiones, actividades y nuevas formas de comprender el mundo profesional.</p>
-<a class="primary-link" href="#experiencias">Explorar experiencias <span aria-hidden="true">↗</span></a>
-</div>
-<div aria-label="Nuestra ruta de aprendizaje" class="hero-note">
-<p class="small-title">Nuestra ruta</p>
-<div class="step"><span class="number">01</span><span><strong>Observa</strong><small>Descubre preguntas y nuevas perspectivas.</small></span></div>
-<div class="step"><span class="number">02</span><span><strong>Explora</strong><small>Interactúa con ideas, casos y herramientas.</small></span></div>
-<div class="step"><span class="number">03</span><span><strong>Aplica</strong><small>Construye respuestas y toma decisiones.</small></span></div>
-</div>
-</div>
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow">Un espacio para aprender haciendo</div>
+      <h1 id="hero-title">El conocimiento se comprende mejor cuando <span>se vive.</span></h1>
+      <p>Explora experiencias académicas que convierten los conceptos en preguntas, decisiones, actividades y nuevas formas de comprender el mundo profesional.</p>
+      <a class="primary-link" href="#experiencias">Explorar experiencias <span aria-hidden="true">↗</span></a>
+    </div>
+    <div aria-label="Nuestra ruta de aprendizaje" class="hero-note">
+      <p class="small-title">Nuestra ruta</p>
+      <div class="step">
+        <span class="number">01</span>
+        <span><strong>Observa</strong><small>Descubre preguntas y nuevas perspectivas.</small></span>
+      </div>
+      <div class="step">
+        <span class="number">02</span>
+        <span><strong>Explora</strong><small>Interactúa con ideas, casos y herramientas.</small></span>
+      </div>
+      <div class="step">
+        <span class="number">03</span>
+        <span><strong>Aplica</strong><small>Construye respuestas y toma decisiones.</small></span>
+      </div>
+    </div>
+  </div>
 </section>
+
 <section aria-labelledby="section-title" class="catalog wrap" id="experiencias">
-<div class="section-top">
-<div><p class="kicker">Colección académica</p><h2 id="section-title">Elige tu área de aprendizaje</h2></div>
-<p>Esta colección crecerá con cada nueva clase. Ya puedes explorar los tres laboratorios del Semillero y los recursos de Ingeniería Industrial. Seguiremos incorporando nuevas experiencias.</p>
-</div>
-<div class="cards">
-<article class="card">
-<div class="card-top"></div><div class="card-inner">
-<div aria-hidden="true" class="card-icon"><svg fill="none" height="29" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="29"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5M8 11h6M11 8v6"></path></svg></div>
-<span class="state">3 experiencias disponibles</span>
-<h3>Semillero de investigación</h3>
-<p>De las primeras preguntas a la construcción de problemas de investigación sustentados en evidencias.</p>
-<div class="module"><span class="module-label">Laboratorios publicados</span><a aria-label="Abrir Laboratorio 1 · Planteamiento del problema" class="lesson-link" href="https://vickymilena.github.io/LABORATORIO-INVESTIGACION/" rel="noopener noreferrer" target="_blank">Laboratorio 1 · Planteamiento del problema <span aria-hidden="true">↗</span></a><a aria-label="Abrir Laboratorio 2 · Objetivos de investigación" class="lesson-link" href="https://vickymilena.github.io/LABORATORIO-INVESTIGACION/Laboratorio_2_Objetivos_Investigacion/" rel="noopener noreferrer" target="_blank">Laboratorio 2 · Objetivos de investigación <span aria-hidden="true">↗</span></a><a aria-label="Abrir Laboratorio 3 · Justificación del proyecto" class="lesson-link" href="https://vickymilena.github.io/LABORATORIO-INVESTIGACION/laboratorio-3-justificacion/" rel="noopener noreferrer" target="_blank">Laboratorio 3 · Justificación del proyecto <span aria-hidden="true">↗</span></a></div>
-</div>
-</article>
-<article class="card">
-<div class="card-top"></div><div class="card-inner">
-<div aria-hidden="true" class="card-icon"><svg fill="none" height="29" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="29"><rect height="18" rx="3" width="18" x="3" y="3"></rect><path d="M7 16v-4m5 4V8m5 8v-6"></path></svg></div>
-<span class="state">2 experiencias disponibles</span>
-<h3>Finanzas</h3>
-<p>Aprende a interpretar indicadores, comparar alternativas y comprender decisiones financieras mediante casos y herramientas prácticas.</p>
-<div class="module"><span class="module-label">Laboratorios publicados</span><a class="lesson-link" href="<a class="lesson-link" href="<a class="lesson-link" href="<a class="lesson-link" href="finanzas/mercado-de-divisas/" target="_blank" rel="noopener noreferrer">Mercado de Divisas ↗</a> <a class="lesson-link" href="finanzas/Laboratorio_03_Derivados_financieros_VERSION_2/laboratorio-derivados-financieros/" target="_blank" rel="noopener noreferrer">Derivados financieros ↗</a>" target="_blank" rel="noopener noreferrer">Mercado de Divisas ↗</a> <a class="lesson-link" href="finanzas/Laboratorio_03_Derivados_financieros_VERSION_2/laboratorio-derivados-financieros/" target="_blank" rel="noopener noreferrer">Derivados financieros ↗</a>" target="_blank" rel="noopener noreferrer">Mercado de Divisas ↗</a> <a class="lesson-link" href="finanzas/Laboratorio_03_Derivados_financieros_VERSION_2/laboratorio-derivados-financieros/" target="_blank" rel="noopener noreferrer">Derivados financieros ↗</a>" target="_blank" rel="noopener noreferrer"> <a class="lesson-link" href="finanzas/Laboratorio_03_Derivados_financieros_VERSION_2/laboratorio-derivados-financieros/" target="_blank" rel="noopener noreferrer">Derivados financieros ↗</a>   <div class="topics"><span class="topic">Mercado cambiario</span><span class="topic">Riesgos financieros internacionales</span></div></div>
-</div>
-</article>
-<article class="card">
-<div class="card-top"></div><div class="card-inner">
-<div aria-hidden="true" class="card-icon"><svg fill="none" height="29" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="29"><path d="M3 21V9l6 4V9l6 4V5l6 3v13H3Z"></path><path d="M7 17h2m3 0h2m3 0h1"></path></svg></div>
-<span class="state">1 experiencia disponible</span>
-<h3>Ingeniería Industrial</h3>
-<p>Selecciona una asignatura para acceder a sus laboratorios y experiencias de aprendizaje. Nuevas materias se incorporarán progresivamente.</p>
-<div class="module">
-<span class="module-label">Asignaturas y laboratorios</span>
-<a aria-label="Explorar asignaturas de Ingeniería Industrial" class="lesson-link" href="ingenieria-industrial/">Ver asignaturas de Ingeniería Industrial ↗</a>
-<div class="topics"><span class="topic">Métodos y Tiempos</span><span class="topic">Gestión por Procesos</span><span class="topic">Programación Lineal</span></div>
-</div>
-</div>
-</article>
-</div>
-<div class="message-strip"><strong>Una colección en crecimiento.</strong> Cada experiencia tendrá su propia dirección y se conservará cuando se agreguen nuevas clases.</div>
+  <div class="section-top">
+    <div>
+      <p class="kicker">Colección académica</p>
+      <h2 id="section-title">Elige tu área de aprendizaje</h2>
+    </div>
+    <p>Esta colección crecerá con cada nueva clase. Ya puedes explorar los tres laboratorios del Semillero y los recursos de Ingeniería Industrial. Seguiremos incorporando nuevas experiencias.</p>
+  </div>
+
+  <div class="cards">
+
+    <!-- SEMILLERO DE INVESTIGACIÓN -->
+    <article class="card">
+      <div class="card-top"></div>
+      <div class="card-inner">
+        <div aria-hidden="true" class="card-icon">
+          <svg fill="none" height="29" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="29">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 5 5M8 11h6M11 8v6"></path>
+          </svg>
+        </div>
+        <span class="state">3 experiencias disponibles</span>
+        <h3>Semillero de investigación</h3>
+        <p>De las primeras preguntas a la construcción de problemas de investigación sustentados en evidencias.</p>
+        <div class="module">
+          <span class="module-label">Laboratorios publicados</span>
+          <a aria-label="Abrir Laboratorio 1 · Planteamiento del problema" class="lesson-link" href="https://vickymilena.github.io/LABORATORIO-INVESTIGACION/" rel="noopener noreferrer" target="_blank">Laboratorio 1 · Planteamiento del problema <span aria-hidden="true">↗</span></a>
+          <a aria-label="Abrir Laboratorio 2 · Objetivos de investigación" class="lesson-link" href="https://vickymilena.github.io/LABORATORIO-INVESTIGACION/Laboratorio_2_Objetivos_Investigacion/" rel="noopener noreferrer" target="_blank">Laboratorio 2 · Objetivos de investigación <span aria-hidden="true">↗</span></a>
+          <a aria-label="Abrir Laboratorio 3 · Justificación del proyecto" class="lesson-link" href="https://vickymilena.github.io/LABORATORIO-INVESTIGACION/laboratorio-3-justificacion/" rel="noopener noreferrer" target="_blank">Laboratorio 3 · Justificación del proyecto <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- FINANZAS -->
+    <article class="card">
+      <div class="card-top"></div>
+      <div class="card-inner">
+        <div aria-hidden="true" class="card-icon">
+          <svg fill="none" height="29" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="29">
+            <rect height="18" rx="3" width="18" x="3" y="3"></rect>
+            <path d="M7 16v-4m5 4V8m5 8v-6"></path>
+          </svg>
+        </div>
+        <span class="state">2 experiencias disponibles</span>
+        <h3>Finanzas</h3>
+        <p>Aprende a interpretar indicadores, comparar alternativas y comprender decisiones financieras mediante casos y herramientas prácticas.</p>
+        <div class="module">
+          <span class="module-label">Laboratorios publicados</span>
+
+          <a class="lesson-link" href="finanzas/mercado-de-divisas/" target="_blank" rel="noopener noreferrer">Mercado de Divisas ↗</a>
+
+          <a class="lesson-link" href="finanzas/Laboratorio_03_Derivados_financieros_VERSION_2/laboratorio-derivados-financieros/" target="_blank" rel="noopener noreferrer">Derivados financieros ↗</a>
+
+          <div class="topics">
+            <span class="topic">Mercado cambiario</span>
+            <span class="topic">Riesgos financieros internacionales</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- INGENIERÍA INDUSTRIAL -->
+    <article class="card">
+      <div class="card-top"></div>
+      <div class="card-inner">
+        <div aria-hidden="true" class="card-icon">
+          <svg fill="none" height="29" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="29">
+            <path d="M3 21V9l6 4V9l6 4V5l6 3v13H3Z"></path>
+            <path d="M7 17h2m3 0h2m3 0h1"></path>
+          </svg>
+        </div>
+        <span class="state">1 experiencia disponible</span>
+        <h3>Ingeniería Industrial</h3>
+        <p>Selecciona una asignatura para acceder a sus laboratorios y experiencias de aprendizaje. Nuevas materias se incorporarán progresivamente.</p>
+        <div class="module">
+          <span class="module-label">Asignaturas y laboratorios</span>
+          <a aria-label="Explorar asignaturas de Ingeniería Industrial" class="lesson-link" href="ingenieria-industrial/">Ver asignaturas de Ingeniería Industrial ↗</a>
+          <div class="topics">
+            <span class="topic">Métodos y Tiempos</span>
+            <span class="topic">Gestión por Procesos</span>
+            <span class="topic">Programación Lineal</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="message-strip">
+    <strong>Una colección en crecimiento.</strong> Cada experiencia tendrá su propia dirección y se conservará cuando se agreguen nuevas clases.
+  </div>
 </section>
+
 <section aria-labelledby="perfil-title" class="profile-preview" id="perfil">
-<div class="wrap preview-layout">
-<figure class="preview-photo"><img alt="Mg. Vicky Ruiz en un espacio de trabajo, sentada ante su computador" height="1182" loading="lazy" src="vicky-ruiz-perfil.jpg" width="1331"/></figure>
-<div class="preview-content">
-<p class="kicker">Detrás de las experiencias</p>
-<h2 id="perfil-title">Una docente, muchas formas de aprender.</h2>
-<p class="profile-caption">Mg. Vicky Ruiz · Ingeniera Industrial · Magíster en Dirección y Administración de Empresas</p>
-<p>Con más de 14 años de trayectoria universitaria, concibo la enseñanza como una oportunidad para conectar preguntas, conocimientos y decisiones reales. Mi trabajo integra la ingeniería, las finanzas, la investigación y la creación de experiencias académicas que invitan a aprender haciendo.</p>
-<div aria-label="Distinciones docentes" class="merits"><span class="merit">Profesor Distinguido · 2021, 2023, 2024 y 2025</span><span class="merit">Finalista de «Docente que Inspira» · Premios PEI 2026</span></div>
-<a class="outline-link" href="sobre-mi.html">Conoce mi trayectoria <span aria-hidden="true">↗</span></a>
-<div class="social-inline"><a href="https://www.linkedin.com/in/vicky-ruiz-velasquez/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a><a href="https://orcid.org/0000-0002-4249-1835" rel="noopener noreferrer" target="_blank">ORCID ↗</a></div>
-</div>
-</div>
+  <div class="wrap preview-layout">
+    <figure class="preview-photo">
+      <img alt="Mg. Vicky Ruiz en un espacio de trabajo, sentada ante su computador" height="1182" loading="lazy" src="vicky-ruiz-perfil.jpg" width="1331"/>
+    </figure>
+    <div class="preview-content">
+      <p class="kicker">Detrás de las experiencias</p>
+      <h2 id="perfil-title">Una docente, muchas formas de aprender.</h2>
+      <p class="profile-caption">Mg. Vicky Ruiz · Ingeniera Industrial · Magíster en Dirección y Administración de Empresas</p>
+      <p>Con más de 14 años de trayectoria universitaria, concibo la enseñanza como una oportunidad para conectar preguntas, conocimientos y decisiones reales. Mi trabajo integra la ingeniería, las finanzas, la investigación y la creación de experiencias académicas que invitan a aprender haciendo.</p>
+      <div aria-label="Distinciones docentes" class="merits">
+        <span class="merit">Profesor Distinguido · 2021, 2023, 2024 y 2025</span>
+        <span class="merit">Finalista de «Docente que Inspira» · Premios PEI 2026</span>
+      </div>
+      <a class="outline-link" href="sobre-mi.html">Conoce mi trayectoria <span aria-hidden="true">↗</span></a>
+      <div class="social-inline">
+        <a href="https://www.linkedin.com/in/vicky-ruiz-velasquez/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a>
+        <a href="https://orcid.org/0000-0002-4249-1835" rel="noopener noreferrer" target="_blank">ORCID ↗</a>
+      </div>
+    </div>
+  </div>
 </section>
-<section aria-labelledby="about-title" class="about" id="acerca"><div class="wrap about-inner"><div><h2 id="about-title">Un espacio para aprender con sentido</h2><p>Materiales creados para conectar el conocimiento académico con preguntas, problemas y decisiones del ejercicio profesional. Un proyecto educativo que seguirá creciendo, clase a clase.</p></div><div class="signature">Mg. Vicky Ruiz</div></div></section>
+
+<section aria-labelledby="about-title" class="about" id="acerca">
+  <div class="wrap about-inner">
+    <div>
+      <h2 id="about-title">Un espacio para aprender con sentido</h2>
+      <p>Materiales creados para conectar el conocimiento académico con preguntas, problemas y decisiones del ejercicio profesional. Un proyecto educativo que seguirá creciendo, clase a clase.</p>
+    </div>
+    <div class="signature">Mg. Vicky Ruiz</div>
+  </div>
+</section>
+
 </main>
-<footer><div class="wrap footer-inner"><span><strong>Experiencias Académicas</strong> · Mg. Vicky Ruiz</span><span>Aprender · Explorar · Aplicar</span></div></footer>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span><strong>Experiencias Académicas</strong> · Mg. Vicky Ruiz</span>
+    <span>Aprender · Explorar · Aplicar</span>
+  </div>
+</footer>
+
 </body>
 </html>
