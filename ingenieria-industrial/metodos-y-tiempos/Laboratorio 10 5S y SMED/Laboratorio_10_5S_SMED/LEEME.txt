@@ -1,0 +1,36 @@
+LABORATORIO 10 · APRENDIENDO 5S Y SMED
+Unidad 2. Estudio de métodos
+Mg. Vicky Ruiz
+
+CONTENIDO DE LA CARPETA
+- index.html: aplicación interactiva de seis escenas.
+- video-5s.mp4: video de ejemplo de las 5S.
+- video-smed.mp4: video explicativo de SMED.
+- poster-5s.jpg y poster-smed.jpg: imágenes de portada de los videos.
+
+CÓMO ABRIR EN EL COMPUTADOR
+1. Extrae el ZIP completo en una carpeta.
+2. Mantén index.html, los dos videos y las dos imágenes juntos, sin cambiar sus nombres.
+3. Haz doble clic en index.html (preferentemente con Chrome o Edge).
+4. Escribe tu nombre completo y comienza. Puedes completar el cuestionario y descargar un PDF personalizado sin conexión.
+5. Para cambiar de estudiante en el mismo navegador, usa "Cambiar estudiante" (borra el avance anterior).
+
+NOTA SOBRE LOS DATOS
+El avance y las respuestas se guardan solo en el navegador y dispositivo utilizados, mediante almacenamiento local. No se envían a la docente ni se almacenan en GitHub Pages o Netlify. Para entregar el laboratorio, el estudiante debe subir el PDF descargado a Moodle o al medio indicado por la docente.
+
+CÓMO PUBLICAR EN GITHUB PAGES
+1. Abre el repositorio donde ya tienes los laboratorios de Métodos y Tiempos.
+2. En su carpeta correspondiente crea una subcarpeta, por ejemplo Laboratorio-10-5S-SMED.
+3. Sube EN ESA SUBCARPETA los cinco archivos de este paquete (index.html, dos MP4, dos JPG). El LEEME es opcional.
+4. Haz Commit changes y espera a que termine la publicación.
+5. Si GitHub Pages ya está activo, la URL será la de tu sitio seguida de la ruta de esa nueva carpeta y una / final.
+6. Para mostrarlo en la página principal de tus laboratorios, agrega un enlace al nuevo directorio desde el índice correspondiente; subirlo no modifica automáticamente ese índice.
+7. Para actualizar: reemplaza los archivos dentro de la misma subcarpeta y confirma los cambios.
+
+CÓMO PUBLICAR EN NETLIFY
+1. Ingresa a Netlify y utiliza la opción de publicar un sitio arrastrando una carpeta.
+2. Arrastra la carpeta EXTRAÍDA que contiene index.html y los videos.
+3. Netlify entregará una URL pública para compartir.
+4. Para actualizar la clase, vuelve a publicar la carpeta actualizada.
+
+La opción más sencilla si ya utilizas GitHub Pages es subir esta carpeta al mismo repositorio de tus otros laboratorios.
