@@ -140,5 +140,58 @@
     </section>
   </main>
   <footer><div class="wrap foot"><span>Experiencias Académicas · Ingeniería Industrial</span><strong>Mg. Vicky Ruiz</strong></div></footer>
+
+<script>
+/* Protección del orden del catálogo de Métodos y Tiempos.
+   Evita duplicados y ordena también las tarjetas agregadas automáticamente. */
+(() => {
+  const contenedor = document.querySelector('.section .cards');
+  if (!contenedor) return;
+
+  function numeroDe(tarjeta) {
+    const etiqueta = tarjeta.querySelector('.meta, .tag, .state');
+    const texto = etiqueta ? etiqueta.textContent : '';
+    const coincidencia = texto.match(/laboratorio\s*0*(\d+)/i);
+    return coincidencia ? Number(coincidencia[1]) : Infinity;
+  }
+
+  function normalizarTarjetas() {
+    const tarjetas = Array.from(contenedor.querySelectorAll(':scope > article'));
+    tarjetas.sort((a, b) => numeroDe(a) - numeroDe(b));
+    const vistos = new Set();
+    const ordenadas = document.createDocumentFragment();
+
+    for (const tarjeta of tarjetas) {
+      const numero = numeroDe(tarjeta);
+      if (Number.isFinite(numero)) {
+        if (vistos.has(numero)) {
+          tarjeta.remove();
+          continue;
+        }
+        vistos.add(numero);
+        const etiqueta = tarjeta.querySelector('.meta, .tag, .state');
+        if (etiqueta) {
+          etiqueta.classList.remove('tag');
+          etiqueta.classList.add('meta');
+          etiqueta.textContent = 'Laboratorio ' + String(numero).padStart(2, '0');
+        }
+      }
+      tarjeta.classList.remove('featured');
+      ordenadas.appendChild(tarjeta);
+    }
+    contenedor.appendChild(ordenadas);
+  }
+
+  // El catálogo automático añade tarjetas después de cargar la página.
+  // Cada vez que lo haga, restauramos el orden, sin modificar los enlaces.
+  const observador = new MutationObserver(() => {
+    observador.disconnect();
+    normalizarTarjetas();
+    observador.observe(contenedor, {childList: true});
+  });
+  normalizarTarjetas();
+  observador.observe(contenedor, {childList: true});
+})();
+</script>
 </body>
 </html>
