@@ -1,30 +1,144 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="#112A46" name="theme-color"/>
-<title>Métodos y Tiempos | Laboratorios | Mg. Vicky Ruiz</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<style>
-:root{--navy:#112A46;--teal:#176B80;--gold:#D6A84B;--cream:#F7F4EC;--ink:#303A46;--muted:#5b6672;--line:#dfe6e8}*{box-sizing:border-box}body{margin:0;background:#faf9f6;color:var(--ink);font:16px/1.55 Inter,Segoe UI,Arial,sans-serif}h1,h2,h3{font-family:Manrope,Inter,Arial,sans-serif;letter-spacing:-.025em;line-height:1.25}a{color:inherit}a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.wrap{max-width:1160px;padding:0 22px;margin:0 auto}.top{background:#fff;border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}.brand{font-size:18px;font-weight:800;color:var(--navy);text-decoration:none}.brand small{display:block;font-size:12px;font-weight:500;color:var(--muted)}.back{color:var(--teal);text-decoration:none;font-size:13px;font-weight:700}.hero{background:var(--navy);color:#fff;padding:58px 0 62px}.eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.hero h1{font-size:clamp(32px,5vw,54px);margin:13px 0}.hero p{max-width:760px;color:#e1e9ef;font-size:17px;margin:0}.section{padding:40px 0 75px}.section h2{font-size:26px;color:var(--navy);margin:0 0 8px}.subtitle{color:var(--muted);margin:0 0 28px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:20px}.card{background:#fff;border:1px solid var(--line);border-top:5px solid var(--teal);border-radius:14px;padding:25px;display:flex;flex-direction:column;box-shadow:0 8px 26px #112a4608;min-height:265px}.card.featured{border-top-color:var(--gold)}.meta{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}.card.featured .meta{color:#9d731f}.card h3{color:var(--navy);font-size:20px;margin:12px 0 10px}.card p{font-size:14px;color:var(--muted);margin:0 0 20px;flex:1}.btn{align-self:flex-start;display:inline-flex;align-items:center;gap:7px;background:var(--teal);color:white;text-decoration:none;font-size:13px;font-weight:800;padding:11px 17px;border-radius:8px}.btn:hover{background:#12586b}.tip{margin-top:28px;background:var(--cream);border-left:4px solid var(--gold);border-radius:8px;padding:17px 19px;font-size:13px}footer{background:var(--navy);color:white;padding:24px 0;font-size:13px}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}@media(max-width:600px){.hero{padding:41px 0}.section{padding:30px 0 50px}.cards{grid-template-columns:1fr}.card{min-height:220px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#112A46" />
+  <title>Métodos y Tiempos | Laboratorios | Mg. Vicky Ruiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #112A46;
+      --teal: #176B80;
+      --gold: #D6A84B;
+      --cream: #F7F4EC;
+      --ink: #303A46;
+      --muted: #5b6672;
+      --line: #dfe6e8;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #faf9f6; color: var(--ink); font: 16px/1.55 Inter, Segoe UI, Arial, sans-serif; }
+    h1, h2, h3 { font-family: Manrope, Inter, Arial, sans-serif; letter-spacing: -.025em; line-height: 1.25; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+    .wrap { max-width: 1160px; padding: 0 22px; margin: 0 auto; }
+    .top { background: #fff; border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 76px; }
+    .brand { font-size: 18px; font-weight: 800; color: var(--navy); text-decoration: none; }
+    .brand small { display: block; font-size: 12px; font-weight: 500; color: var(--muted); }
+    .back { color: var(--teal); text-decoration: none; font-size: 13px; font-weight: 700; }
+    .hero { background: var(--navy); color: #fff; padding: 58px 0 62px; }
+    .eyebrow { color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(32px, 5vw, 54px); margin: 13px 0; }
+    .hero p { max-width: 760px; color: #e1e9ef; font-size: 17px; margin: 0; }
+    .section { padding: 40px 0 75px; }
+    .section h2 { font-size: 26px; color: var(--navy); margin: 0 0 8px; }
+    .subtitle { color: var(--muted); margin: 0 0 28px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(285px, 1fr)); gap: 20px; }
+    .card { background: #fff; border: 1px solid var(--line); border-top: 5px solid var(--teal); border-radius: 14px; padding: 25px; display: flex; flex-direction: column; box-shadow: 0 8px 26px #112a4608; min-height: 265px; }
+    .meta { font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); }
+    .card h3 { color: var(--navy); font-size: 20px; margin: 12px 0 10px; }
+    .card p { font-size: 14px; color: var(--muted); margin: 0 0 20px; flex: 1; }
+    .btn { align-self: flex-start; display: inline-flex; align-items: center; gap: 7px; background: var(--teal); color: white; text-decoration: none; font-size: 13px; font-weight: 800; padding: 11px 17px; border-radius: 8px; }
+    .btn:hover { background: #12586b; }
+    .tip { margin-top: 28px; background: var(--cream); border-left: 4px solid var(--gold); border-radius: 8px; padding: 17px 19px; font-size: 13px; }
+    footer { background: var(--navy); color: white; padding: 24px 0; font-size: 13px; }
+    .foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 600px) {
+      .hero { padding: 41px 0; }
+      .section { padding: 30px 0 50px; }
+      .cards { grid-template-columns: 1fr; }
+      .card { min-height: 220px; }
+    }
+  </style>
 </head>
 <body>
-<header class="top"><div class="wrap nav"><a class="brand" href="../../">Experiencias Académicas<small>Mg. Vicky Ruiz</small></a><a class="back" href="../../">← Volver al portal</a></div></header>
-<main><section class="hero"><div class="wrap"><div class="eyebrow">Ingeniería Industrial · AulaEscena</div><h1>Métodos y Tiempos</h1><p>Nueve laboratorios interactivos para observar el trabajo, analizar procesos, interpretar resultados y plantear mejoras fundamentadas.</p></div></section>
-<section class="section"><div class="wrap"><h2>Selecciona tu laboratorio</h2><p class="subtitle">Las actividades están organizadas según la secuencia de aprendizaje de la asignatura.</p><div class="cards">
-<article class="card"><span class="meta">Laboratorio 01</span><h3>Ingeniería del trabajo y productividad</h3><p>Productividad, estudio de métodos y análisis de oportunidades de mejora.</p><a class="btn" href="laboratorio-1/">Abrir laboratorio ↗</a></article>
-<article class="card"><span class="meta">Laboratorio 02</span><h3>Cursograma sinóptico</h3><p>Registro de operaciones e inspecciones y elaboración del cursograma.</p><a class="btn" href="laboratorio-2/">Abrir laboratorio ↗</a></article>
-<article class="card"><span class="meta">Laboratorio 03</span><h3>Cursograma analítico</h3><p>Análisis de operaciones, transportes, inspecciones, esperas y almacenamiento.</p><a class="btn" href="laboratorio-3/">Abrir laboratorio ↗</a></article>
-<article class="card"><span class="meta">Laboratorio 04</span><h3>Diagrama de recorrido</h3><p>Representación espacial de desplazamientos y propuesta de redistribución.</p><a class="btn" href="Laboratorio 4 Diagrama_Recorrido/">Abrir laboratorio ↗</a></article>
-<article class="card"><span class="meta">Laboratorio 05</span><h3>Diagrama bimanual</h3><p>Registro sincronizado de las actividades de ambas manos.</p><a class="btn" href="Laboratorio_05_Diagrama_Bimanual/">Abrir laboratorio ↗</a></article>
-<article class="card"><span class="meta">Laboratorio 06</span><h3>Diagrama hombre–máquina</h3><p>Actividades simultáneas, tiempos de ciclo y utilización de recursos.</p><a class="btn" href="Laboratorio 6 Hombre-máquina/AulaEscena_Lab6_Hombre_Maquina_V3/">Abrir laboratorio ↗</a></article>
-<article class="card"><span class="meta">Laboratorio 07</span><h3>Procedimiento operativo estandarizado (POE)</h3><p>Secuencia de actividades, documentos y verificación de procedimientos.</p><a class="btn" href="Laboratorio 7-POE/">Abrir laboratorio ↗</a></article>
-
-<article class="card featured"><span class="meta">Laboratorio 09 · Nuevo</span><h3>Therbligs y economía de movimientos</h3><p>Identificación de movimientos efectivos e inefectivos, diagrama de ambas manos y análisis del video de ensamble.</p><a class="btn" href="Laboratorio 9 Therbligs/">Abrir laboratorio ↗</a></article>
-</div><div class="tip"><strong>Nota para estudiantes:</strong> utiliza un computador para las actividades de diagramación y descarga tus evidencias antes de finalizar. Los registros guardados en el navegador no se envían automáticamente a Moodle.</div></div></section></main>
-<footer><div class="wrap foot"><span>Experiencias Académicas · Ingeniería Industrial</span><strong>Mg. Vicky Ruiz</strong></div></footer>
-</body></html>
+  <header class="top">
+    <div class="wrap nav">
+      <a class="brand" href="../../">Experiencias Académicas<small>Mg. Vicky Ruiz</small></a>
+      <a class="back" href="../../">← Volver al portal</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Ingeniería Industrial · AulaEscena</div>
+        <h1>Métodos y Tiempos</h1>
+        <p>Diez laboratorios interactivos para observar el trabajo, analizar procesos, interpretar resultados y plantear mejoras fundamentadas.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <h2>Selecciona tu laboratorio</h2>
+        <p class="subtitle">Las actividades están organizadas según la secuencia de aprendizaje de la asignatura.</p>
+        <div class="cards">
+          <article class="card">
+            <span class="meta">Laboratorio 01</span>
+            <h3>Ingeniería del trabajo y productividad</h3>
+            <p>Productividad, estudio de métodos y análisis de oportunidades de mejora.</p>
+            <a class="btn" href="laboratorio-1/">Abrir laboratorio ↗</a>
+          </article>
+          <article class="card">
+            <span class="meta">Laboratorio 02</span>
+            <h3>Cursograma sinóptico</h3>
+            <p>Registro de operaciones e inspecciones y elaboración del cursograma.</p>
+            <a class="btn" href="laboratorio-2/">Abrir laboratorio ↗</a>
+          </article>
+          <article class="card">
+            <span class="meta">Laboratorio 03</span>
+            <h3>Cursograma analítico</h3>
+            <p>Análisis de operaciones, transportes, inspecciones, esperas y almacenamiento.</p>
+            <a class="btn" href="laboratorio-3/">Abrir laboratorio ↗</a>
+          </article>
+          <article class="card">
+            <span class="meta">Laboratorio 04</span>
+            <h3>Diagrama de recorrido</h3>
+            <p>Representación espacial de desplazamientos y propuesta de redistribución.</p>
+            <a class="btn" href="Laboratorio 4 Diagrama_Recorrido/">Abrir laboratorio ↗</a>
+          </article>
+          <article class="card">
+            <span class="meta">Laboratorio 05</span>
+            <h3>Diagrama bimanual</h3>
+            <p>Registro sincronizado de las actividades de ambas manos.</p>
+            <a class="btn" href="Laboratorio_05_Diagrama_Bimanual/">Abrir laboratorio ↗</a>
+          </article>
+          <article class="card">
+            <span class="meta">Laboratorio 06</span>
+            <h3>Diagrama hombre–máquina</h3>
+            <p>Actividades simultáneas, tiempos de ciclo y utilización de recursos.</p>
+            <a class="btn" href="Laboratorio 6 Hombre-máquina/AulaEscena_Lab6_Hombre_Maquina_V3/">Abrir laboratorio ↗</a>
+          </article>
+          <article class="card">
+            <span class="meta">Laboratorio 07</span>
+            <h3>Procedimiento operativo estandarizado (POE)</h3>
+            <p>Secuencia de actividades, documentos y verificación de procedimientos.</p>
+            <a class="btn" href="Laboratorio 7-POE/">Abrir laboratorio ↗</a>
+          </article>
+          <article class="card">
+            <span class="meta">Laboratorio 08</span>
+            <h3>Estudio de métodos: las seis etapas</h3>
+            <p>Misión Mejora: caso Brisa Norte, Pareto, cursogramas, evaluación de alternativas e indicadores de mejora.</p>
+            <a class="btn" href="Laboratorio 8 Estudio de Metodos/">Abrir laboratorio ↗</a>
+          </article>
+          <article class="card">
+            <span class="meta">Laboratorio 09</span>
+            <h3>Therbligs y economía de movimientos</h3>
+            <p>Identificación de movimientos, diagrama de ambas manos y análisis del video de ensamble.</p>
+            <a class="btn" href="Laboratorio 9 Therbligs/">Abrir laboratorio ↗</a>
+          </article>
+          <article class="card">
+            <span class="meta">Laboratorio 10</span>
+            <h3>Aprendiendo las 5S y SMED</h3>
+            <p>Autoaprendizaje con videos, ejemplos guiados de Brisas Norte, evaluación y descarga del informe PDF.</p>
+            <a class="btn" href="Laboratorio 10 5S y SMED/Laboratorio_10_5S_SMED/">Abrir laboratorio ↗</a>
+          </article>
+        </div>
+        <div class="tip"><strong>Nota para estudiantes:</strong> utiliza un computador para las actividades de diagramación y descarga tus evidencias antes de finalizar. Los registros guardados en el navegador no se envían automáticamente a Moodle.</div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap foot"><span>Experiencias Académicas · Ingeniería Industrial</span><strong>Mg. Vicky Ruiz</strong></div></footer>
+</body>
+</html>
