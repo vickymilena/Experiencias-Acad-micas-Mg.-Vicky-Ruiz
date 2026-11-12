@@ -1,0 +1,16 @@
+LABORATORIO 11. ESTUDIO DE TIEMPOS
+Mg. Vicky Ruiz
+
+Archivo: index.html (incluye fotografías, ruta interactiva y las 18 escenas).
+
+CORRECCIÓN: identificación actualizada a Laboratorio 11 en la portada, encabezados, pestaña del navegador, documentos Word y Excel y nombres de descarga.
+
+GUARDADO: conserva el progreso previo del laboratorio de tiempos si se abrió con su antigua etiqueta, y continuará guardándolo con su nueva identificación.
+
+DESCARGAS: contienen el nombre completo del estudiante. En celulares, usar Descargar o Guardar o compartir; en iPhone, seleccionar Guardar en Archivos cuando corresponda.
+
+GITHUB PAGES: coloca este index.html en la carpeta dedicada al Laboratorio 11. Si ya publicaste este mismo estudio con la etiqueta 10 y deseas mantener su enlace público, reemplaza su index.html y actualiza el texto y enlace del índice general de la asignatura. No reemplaces los index.html de la asignatura ni del repositorio.
+
+NETLIFY: publica la carpeta que contiene index.html o actualiza el sitio existente.
+
+El HTML no envía automáticamente notas ni respuestas a Moodle; las entregas se realizan con Word/Excel descargados.
